@@ -1,0 +1,99 @@
+openapi: 3.0.3
+info:
+  title: EDGAR Data Pipeline API
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+paths:
+  /api/auth/login:
+    post:
+      summary: User login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Successful login
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  token_type:
+                    type: string
+        '401':
+          description: Unauthorized
+  /api/reports/daily-count:
+    get:
+      summary: Get daily filing counts
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: A list of daily form counts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    date_filed:
+                      type: string
+                    form_type:
+                      type: string
+                    filing_count:
+                      type: integer
+  /api/reports/by-ticker:
+    get:
+      summary: Get filings for given tickers
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: tickers
+          in: query
+          schema:
+            type: string
+          required: true
+          description: Comma separated list of tickers
+      responses:
+        '200':
+          description: A list of filings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Filing'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Filing:
+      type: object
+      properties:
+        id:
+          type: string
+        ticker:
+          type: string
+        companyName:
+          type: string
+        formType:
+          type: string
+        timestamp:
+          type: string
+        filingUrl:
+          type: string

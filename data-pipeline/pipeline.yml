@@ -1,0 +1,8 @@
+name: bruin-duckdb
+schedule: daily
+start_date: "2025-01-01"
+catchup: true
+default_connections:
+    duckdb: "duckdb-default"
+default:
+    type: duckdb.sql
