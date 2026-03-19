@@ -19,12 +19,14 @@ def main():
     
     conn = duckdb.connect('md:')
     
+    # Create table if it doesn't exist (with correct schema incl. is_amendment)
     conn.execute('''
     CREATE TABLE IF NOT EXISTS clean_edgar_daily (
         cik_str VARCHAR,
         cik_num BIGINT,
         company_name VARCHAR,
         form_type VARCHAR,
+        is_amendment BOOLEAN,
         date_filed VARCHAR,
         filename VARCHAR,
         document_url VARCHAR,
@@ -34,17 +36,28 @@ def main():
         bruin_run_date VARCHAR
     )
     ''')
+
+    # Add is_amendment column if it doesn't exist yet (migration-safe)
+    try:
+        conn.execute("ALTER TABLE clean_edgar_daily ADD COLUMN is_amendment BOOLEAN")
+        print("Added is_amendment column.")
+    except Exception:
+        pass  # Column already exists
     
     # Delete existing records for this run_date to ensure idempotency
     conn.execute(f"DELETE FROM clean_edgar_daily WHERE bruin_run_date = '{date_str}'")
     
     conn.execute(f'''
     INSERT INTO clean_edgar_daily 
+        (cik_str, cik_num, company_name, form_type, is_amendment,
+         date_filed, filename, document_url, raw_submission_number,
+         clean_submission_number, filing_index_url, bruin_run_date)
     SELECT DISTINCT
         LPAD(CAST(CAST(cik AS BIGINT) AS VARCHAR), 10, '0') AS cik_str,
         CAST(cik AS BIGINT) AS cik_num,
         company_name,
-        form_type,
+        REGEXP_REPLACE(form_type, '/A$', '', 'i') AS form_type,
+        form_type ILIKE '%/A' AS is_amendment,
         date_filed,
         filename,
         'https://www.sec.gov/Archives/' || filename AS document_url,
@@ -56,6 +69,7 @@ def main():
     FROM raw_edgar_daily
     WHERE date_filed = '{date_formatted}'
     ''')
+
     
     res = conn.execute(f"SELECT COUNT(*) FROM clean_edgar_daily WHERE bruin_run_date = '{date_str}'").fetchone()
     print(f"Successfully cleaned EDGAR data for {date_str}. Processed: {res[0]} records.")

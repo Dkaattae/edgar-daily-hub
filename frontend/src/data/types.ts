@@ -2,7 +2,8 @@ export interface Filing {
   id: string;
   ticker: string;
   companyName: string;
-  formType: FormType;
+  formType: string;
+  isAmendment: boolean;
   timestamp: string;
   filingUrl: string;
 }

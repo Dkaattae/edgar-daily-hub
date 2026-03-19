@@ -5,6 +5,11 @@ class LoginRequest(BaseModel):
     username: str
     password: str
 
+class UserCreate(BaseModel):
+    username: str
+    password: str
+
+
 class Token(BaseModel):
     access_token: str
     token_type: str
@@ -19,5 +24,7 @@ class Filing(BaseModel):
     ticker: str
     companyName: str
     formType: str
+    isAmendment: bool = False
     timestamp: str
     filingUrl: str
+

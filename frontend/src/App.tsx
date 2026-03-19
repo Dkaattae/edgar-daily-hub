@@ -8,6 +8,8 @@ import Dashboard from "@/pages/Dashboard";
 import Watchlist from "@/pages/Watchlist";
 import NotFound from "@/pages/NotFound";
 import Login from "@/pages/Login";
+import SignUp from "@/pages/SignUp";
+
 
 const queryClient = new QueryClient();
 
@@ -36,6 +38,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+
           <Route path="/" element={<ProtectedRoute><ProtectedLayout><Dashboard /></ProtectedLayout></ProtectedRoute>} />
           <Route path="/watchlist" element={<ProtectedRoute><ProtectedLayout><Watchlist /></ProtectedLayout></ProtectedRoute>} />
           <Route path="*" element={<NotFound />} />

@@ -19,6 +19,13 @@ export const login = async (username: string, password: string) => {
   return data;
 };
 
+export const register = async (username: string, password: string) => {
+  const { data } = await axios.post("/api/auth/register", { username, password });
+  localStorage.setItem("token", data.access_token);
+  return data;
+};
+
+
 export const logout = () => {
   localStorage.removeItem("token");
   window.location.href = "/login";
@@ -29,9 +36,15 @@ export const fetchDailyCounts = async () => {
   return data;
 };
 
+export const fetchAllDailyCounts = async () => {
+  const { data } = await api.get("/reports/all-daily-counts");
+  return data;
+};
+
 export const fetchFilingsByTicker = async (tickers: string): Promise<Filing[]> => {
   const { data } = await api.get(`/reports/by-ticker?tickers=${tickers}`);
   return data;
 };
+
 
 export default api;

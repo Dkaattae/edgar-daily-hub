@@ -11,6 +11,7 @@ materialization:
 SELECT 
     e.company_name,
     e.form_type,
+    e.is_amendment,
     e.date_filed,
     e.filename,
     e.document_url,
@@ -22,6 +23,6 @@ SELECT
     e.cik_str,
     t.ticker,
     t.title AS ticker_company_title
-FROM clean_edgar_daily e
-LEFT JOIN raw_company_tickers t 
+FROM my_db.main.clean_edgar_daily e
+LEFT JOIN my_db.main.raw_company_tickers t 
   ON e.cik_num = t.cik_str;
