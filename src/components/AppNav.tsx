@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { LayoutDashboard, Eye } from "lucide-react";
+import { LayoutDashboard, Eye, LogIn, LogOut, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const links = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -8,6 +10,7 @@ const links = [
 
 const AppNav = () => {
   const { pathname } = useLocation();
+  const [loggedIn, setLoggedIn] = useState(false);
 
   return (
     <header className="border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-50">
@@ -33,9 +36,28 @@ const AppNav = () => {
             ))}
           </nav>
         </div>
-        <span className="text-xs text-muted-foreground font-mono">
-          {new Date().toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" })}
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="text-xs text-muted-foreground font-mono hidden sm:inline">
+            {new Date().toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" })}
+          </span>
+          {loggedIn ? (
+            <div className="flex items-center gap-2">
+              <span className="flex items-center gap-1.5 text-sm text-foreground">
+                <User className="h-4 w-4 text-primary" />
+                <span className="font-mono">mock_user</span>
+              </span>
+              <Button variant="ghost" size="sm" onClick={() => setLoggedIn(false)} aria-label="Log out">
+                <LogOut className="h-4 w-4" />
+                Log out
+              </Button>
+            </div>
+          ) : (
+            <Button variant="outline" size="sm" onClick={() => setLoggedIn(true)} aria-label="Log in">
+              <LogIn className="h-4 w-4" />
+              Log in
+            </Button>
+          )}
+        </div>
       </div>
     </header>
   );
