@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from fastapi.security import OAuth2PasswordBearer
 import jwt
 
-from . import models, database, auth, motherduck
+import models, database, auth, motherduck
 
 app = FastAPI(title="EDGAR Data Pipeline API")
 
@@ -82,6 +82,34 @@ def get_all_daily_counts(user: database.User = Depends(get_current_user)):
 def get_filings_by_ticker(tickers: str, user: database.User = Depends(get_current_user)):
     ticker_list = [t.strip().upper() for t in tickers.split(",") if t.strip()]
     return motherduck.fetch_filings_by_tickers(ticker_list)
+
+# --- Watchlist endpoints ---
+
+@app.get("/api/watchlist", response_model=list[str])
+def get_watchlist(user: database.User = Depends(get_current_user), db: Session = Depends(database.get_db)):
+    rows = db.query(database.WatchlistTicker).filter(database.WatchlistTicker.user_id == user.id).all()
+    return [row.ticker for row in rows]
+
+@app.post("/api/watchlist/{ticker}", status_code=201)
+def add_to_watchlist(ticker: str, user: database.User = Depends(get_current_user), db: Session = Depends(database.get_db)):
+    ticker = ticker.upper()
+    exists = db.query(database.WatchlistTicker).filter(
+        database.WatchlistTicker.user_id == user.id,
+        database.WatchlistTicker.ticker == ticker
+    ).first()
+    if not exists:
+        db.add(database.WatchlistTicker(user_id=user.id, ticker=ticker))
+        db.commit()
+    return {"ticker": ticker}
+
+@app.delete("/api/watchlist/{ticker}", status_code=204)
+def remove_from_watchlist(ticker: str, user: database.User = Depends(get_current_user), db: Session = Depends(database.get_db)):
+    db.query(database.WatchlistTicker).filter(
+        database.WatchlistTicker.user_id == user.id,
+        database.WatchlistTicker.ticker == ticker.upper()
+    ).delete()
+    db.commit()
+
 
 import os
 frontend_dist = os.path.join(os.path.dirname(__file__), "frontend/dist")

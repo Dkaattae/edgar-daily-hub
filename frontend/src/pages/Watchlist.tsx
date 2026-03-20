@@ -1,28 +1,36 @@
-import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import { fetchFilingsByTicker } from "@/lib/api";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { fetchFilingsByTicker, fetchWatchlist, addToWatchlist, removeFromWatchlist } from "@/lib/api";
 import { Filing } from "@/data/types";
 import WatchlistInput from "@/components/WatchlistInput";
 import FilingsTable from "@/components/FilingsTable";
 
 const Watchlist = () => {
-  const [tickers, setTickers] = useState<string[]>(["AAPL", "MSFT"]);
+  const queryClient = useQueryClient();
+
+  // Load tickers from Postgres
+  const { data: tickers = [] } = useQuery<string[]>({
+    queryKey: ["watchlist"],
+    queryFn: fetchWatchlist,
+  });
 
   const { data: filings = [], isLoading } = useQuery({
     queryKey: ["watchlistFilings", tickers],
     queryFn: () => fetchFilingsByTicker(tickers.join(",")),
-    enabled: tickers.length > 0
+    enabled: tickers.length > 0,
   });
 
-  const handleAddTicker = (ticker: string) => {
-    if (!tickers.includes(ticker)) {
-      setTickers([...tickers, ticker]);
-    }
-  };
+  const addMutation = useMutation({
+    mutationFn: addToWatchlist,
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["watchlist"] }),
+  });
 
-  const handleRemoveTicker = (ticker: string) => {
-    setTickers(tickers.filter((t) => t !== ticker));
-  };
+  const removeMutation = useMutation({
+    mutationFn: removeFromWatchlist,
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["watchlist"] }),
+  });
+
+  const handleAddTicker = (ticker: string) => addMutation.mutate(ticker);
+  const handleRemoveTicker = (ticker: string) => removeMutation.mutate(ticker);
 
   // Group filings by ticker, preserving the order of the user's tickers list
   const filingsByTicker: Record<string, Filing[]> = {};
@@ -70,9 +78,13 @@ const Watchlist = () => {
             </div>
           );
         })
-      ) : (
+      ) : tickers.length > 0 ? (
         <div className="p-8 text-center text-gray-500">
           No filings found for the selected tickers.
+        </div>
+      ) : (
+        <div className="p-8 text-center text-gray-500">
+          Add tickers above to track their SEC filings.
         </div>
       )}
     </div>

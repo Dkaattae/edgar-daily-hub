@@ -1,6 +1,6 @@
 import duckdb
 import os
-from .models import DailyCount, Filing
+from models import DailyCount, Filing
 import uuid
 
 def get_md_conn():

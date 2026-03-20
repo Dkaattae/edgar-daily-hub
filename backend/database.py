@@ -4,6 +4,8 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 import os
 
 SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://admin:password123@db:5432/edgar_auth")
+# Supabase / Heroku emit postgres:// but SQLAlchemy requires postgresql://
+SQLALCHEMY_DATABASE_URL = SQLALCHEMY_DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -14,6 +16,13 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String(50), unique=True, index=True, nullable=False)
     password_hash = Column(String(255), nullable=False)
+
+class WatchlistTicker(Base):
+    __tablename__ = "watchlist_tickers"
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, nullable=False, index=True)
+    ticker = Column(String(20), nullable=False)
+
 
 def get_db():
     db = SessionLocal()

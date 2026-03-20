@@ -4,8 +4,8 @@ import { useNavigate, Link } from "react-router-dom";
 import { toast } from "sonner";
 
 const Login = () => {
-  const [username, setUsername] = useState("admin");
-  const [password, setPassword] = useState("password123");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {

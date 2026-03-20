@@ -41,6 +41,17 @@ export const logout = () => {
   window.location.href = "/login";
 };
 
+export const getUsername = (): string => {
+  const token = localStorage.getItem("token");
+  if (!token) return "";
+  try {
+    const payload = JSON.parse(atob(token.split(".")[1]));
+    return payload.sub ?? "";
+  } catch {
+    return "";
+  }
+};
+
 export const fetchDailyCounts = async () => {
   const { data } = await api.get("/reports/daily-count");
   return data;
@@ -54,6 +65,19 @@ export const fetchAllDailyCounts = async () => {
 export const fetchFilingsByTicker = async (tickers: string): Promise<Filing[]> => {
   const { data } = await api.get(`/reports/by-ticker?tickers=${tickers}`);
   return data;
+};
+
+export const fetchWatchlist = async (): Promise<string[]> => {
+  const { data } = await api.get("/watchlist");
+  return data;
+};
+
+export const addToWatchlist = async (ticker: string): Promise<void> => {
+  await api.post(`/watchlist/${ticker}`);
+};
+
+export const removeFromWatchlist = async (ticker: string): Promise<void> => {
+  await api.delete(`/watchlist/${ticker}`);
 };
 
 
