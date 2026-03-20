@@ -64,7 +64,8 @@ def main():
         REPLACE(split_part(filename, '/', 4), '.txt', '') AS raw_submission_number,
         REPLACE(REPLACE(split_part(filename, '/', 4), '.txt', ''), '-', '') AS clean_submission_number,
         'https://www.sec.gov/Archives/edgar/data/' || CAST(CAST(cik AS BIGINT) AS VARCHAR) || '/' || 
-            REPLACE(REPLACE(split_part(filename, '/', 4), '.txt', ''), '-', '') || '/' AS filing_index_url,
+            REPLACE(REPLACE(split_part(filename, '/', 4), '.txt', ''), '-', '') || '/' ||
+            REPLACE(split_part(filename, '/', 4), '.txt', '') || '-index.htm' AS filing_index_url,
         '{date_str}' as bruin_run_date
     FROM raw_edgar_daily
     WHERE date_filed = '{date_formatted}'

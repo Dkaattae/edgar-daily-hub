@@ -16,6 +16,7 @@ SELECT
     MAX(date_filed) AS date_filed,
     BOOL_OR(is_amendment) AS is_amendment,
     FIRST(document_url ORDER BY date_filed DESC) AS document_url,
+    FIRST(filing_index_url ORDER BY date_filed DESC) AS filing_index_url,
     FIRST(raw_submission_number ORDER BY date_filed DESC) AS raw_submission_number,
     FIRST(company_name ORDER BY date_filed DESC) AS company_name,
     FIRST(cik_str ORDER BY date_filed DESC) AS cik_str,

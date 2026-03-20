@@ -8,6 +8,6 @@ export interface Filing {
   filingUrl: string;
 }
 
-export type FormType = "10-K" | "10-Q" | "8-K" | "S-1" | "4" | "SC 13G" | "DEF 14A";
+export type FormType = "10-K" | "10-Q" | "8-K" | "S-1" | "4" | "144" | "SCHEDULE 13G" | "DEF 14A";
 
-export const FORM_TYPES: FormType[] = ["10-K", "10-Q", "8-K", "S-1", "4", "SC 13G", "DEF 14A"];
+export const FORM_TYPES: FormType[] = ["10-K", "10-Q", "8-K", "S-1", "4", "144", "SCHEDULE 13G", "DEF 14A"];

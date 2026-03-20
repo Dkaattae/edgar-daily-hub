@@ -13,6 +13,16 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response && error.response.status === 401) {
+      logout();
+    }
+    return Promise.reject(error);
+  }
+);
+
 export const login = async (username: string, password: string) => {
   const { data } = await axios.post("/api/auth/login", { username, password });
   localStorage.setItem("token", data.access_token);

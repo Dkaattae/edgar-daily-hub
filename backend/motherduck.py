@@ -1,6 +1,11 @@
 import duckdb
+import os
 from .models import DailyCount, Filing
 import uuid
+
+def get_md_conn():
+    token = os.getenv("MOTHERDUCK_TOKEN")
+    return duckdb.connect(f"md:?motherduck_token={token}" if token else "md:")
 
 def format_date(date_str: str) -> str:
     """Converts YYYYMMDD to YYYY-MM-DD."""
@@ -9,7 +14,7 @@ def format_date(date_str: str) -> str:
     return date_str or ""
 
 def fetch_daily_counts():
-    conn = duckdb.connect('md:')
+    conn = get_md_conn()
     try:
         # Get counts for the latest available date (for summary cards)
         res = conn.execute("""
@@ -34,7 +39,7 @@ def fetch_daily_counts():
         conn.close()
 
 def fetch_all_daily_counts():
-    conn = duckdb.connect('md:')
+    conn = get_md_conn()
     try:
         # Get counts per day per form type across all dates (for time series chart)
         res = conn.execute("""
@@ -61,7 +66,7 @@ def fetch_filings_by_tickers(tickers: list[str]):
     if not tickers:
         return []
 
-    conn = duckdb.connect('md:')
+    conn = get_md_conn()
     ticker_params = ",".join(["?"] * len(tickers))
     try:
         # Use the report view which already deduplicates per ticker+form_type
@@ -73,7 +78,7 @@ def fetch_filings_by_tickers(tickers: list[str]):
                 form_type,
                 COALESCE(is_amendment, FALSE) AS is_amendment,
                 date_filed,
-                document_url
+                filing_index_url
             FROM my_db.main.report_filings_by_ticker
             WHERE ticker IN ({ticker_params})
             ORDER BY ticker, date_filed DESC

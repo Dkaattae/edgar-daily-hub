@@ -16,7 +16,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
+@app.get("/api")
 def read_root():
     return {"message": "Welcome to EDGAR Data Pipeline API"}
 
@@ -79,4 +82,23 @@ def get_all_daily_counts(user: database.User = Depends(get_current_user)):
 def get_filings_by_ticker(tickers: str, user: database.User = Depends(get_current_user)):
     ticker_list = [t.strip().upper() for t in tickers.split(",") if t.strip()]
     return motherduck.fetch_filings_by_tickers(ticker_list)
+
+import os
+frontend_dist = os.path.join(os.path.dirname(__file__), "frontend/dist")
+
+if os.path.exists(os.path.join(frontend_dist, "assets")):
+    app.mount("/assets", StaticFiles(directory=os.path.join(frontend_dist, "assets")), name="assets")
+
+@app.get("/{full_path:path}")
+async def serve_react_app(full_path: str):
+    file_path = os.path.join(frontend_dist, full_path)
+    if os.path.exists(file_path) and os.path.isfile(file_path):
+        return FileResponse(file_path)
+    
+    index_path = os.path.join(frontend_dist, "index.html")
+    if os.path.exists(index_path):
+        return FileResponse(index_path)
+        
+    return {"message": "Frontend build not found. Be sure to compile the React app into frontend/dist."}
+
 

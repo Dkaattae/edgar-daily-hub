@@ -22,23 +22,9 @@ const formColors: Record<string, string> = {
   "S-1": "bg-chart-4/20 text-chart-4 border-chart-4/30",
   "4": "bg-chart-5/20 text-chart-5 border-chart-5/30",
   "3": "bg-chart-5/20 text-chart-5 border-chart-5/30",
-  "SC 13G": "bg-secondary text-secondary-foreground border-border",
+  "144": "bg-card text-card-foreground border-border",
+  "SCHEDULE 13G": "bg-secondary text-secondary-foreground border-border",
   "DEF 14A": "bg-muted text-muted-foreground border-border",
-};
-
-/** Build the SEC EDGAR human-browsable index URL from a filing.
- *  Format: https://www.sec.gov/Archives/edgar/data/{CIK}/{accessionNoDashes}-index.html
- *  We derive: CIK from cik_str (strip leading zeros) and accession from raw_submission_number.
- */
-const buildIndexUrl = (f: Filing): string => {
-  // raw_submission_number is like "0001780525-26-000005"
-  // cik_str may not be on the Filing type but filingUrl contains the CIK
-  // Extract CIK from filingUrl: https://www.sec.gov/Archives/edgar/data/{cik}/...
-  const match = f.filingUrl.match(/edgar\/data\/(\d+)\//);
-  if (!match) return f.filingUrl;
-  const cik = match[1];
-  const accessionNoDashes = f.id.replace(/-/g, "");
-  return `https://www.sec.gov/Archives/edgar/data/${cik}/${accessionNoDashes}-index.html`;
 };
 
 const FilingsTable = ({ filings, title, hideTicker }: FilingsTableProps) => {
@@ -98,12 +84,12 @@ const FilingsTable = ({ filings, title, hideTicker }: FilingsTableProps) => {
                 </TableCell>
                 <TableCell>
                   <a
-                    href={buildIndexUrl(f)}
+                    href={f.filingUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline text-sm"
                   >
-                    View Index →
+                    view in edgar →
                   </a>
                 </TableCell>
               </TableRow>

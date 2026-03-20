@@ -1,0 +1,1464 @@
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250101.idx
+Access forbidden for 2025-01-01 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-01-01. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250102.idx
+Successfully inserted 4845 records for 2025-01-02 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-02. Processed: 4794 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250103.idx
+Successfully inserted 8387 records for 2025-01-03 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-03. Processed: 8036 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250104.idx
+Access forbidden for 2025-01-04 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-01-04. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250105.idx
+Access forbidden for 2025-01-05 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-01-05. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250106.idx
+Successfully inserted 6553 records for 2025-01-06 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-06. Processed: 6197 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250107.idx
+Successfully inserted 3907 records for 2025-01-07 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-07. Processed: 3868 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250108.idx
+Successfully inserted 4240 records for 2025-01-08 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-08. Processed: 3958 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250109.idx
+Access forbidden for 2025-01-09 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-01-09. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250110.idx
+Successfully inserted 4727 records for 2025-01-10 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-10. Processed: 4529 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250111.idx
+Access forbidden for 2025-01-11 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-01-11. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250112.idx
+Access forbidden for 2025-01-12 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-01-12. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250113.idx
+Successfully inserted 3416 records for 2025-01-13 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-13. Processed: 3273 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250114.idx
+Successfully inserted 3706 records for 2025-01-14 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-14. Processed: 3542 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250115.idx
+Successfully inserted 3860 records for 2025-01-15 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-15. Processed: 3745 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250116.idx
+Successfully inserted 3202 records for 2025-01-16 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-16. Processed: 3047 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250117.idx
+Successfully inserted 4266 records for 2025-01-17 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-17. Processed: 4068 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250118.idx
+Access forbidden for 2025-01-18 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-01-18. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250119.idx
+Access forbidden for 2025-01-19 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-01-19. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250120.idx
+Access forbidden for 2025-01-20 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-01-20. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250121.idx
+Successfully inserted 3697 records for 2025-01-21 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-21. Processed: 3626 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250122.idx
+Successfully inserted 3939 records for 2025-01-22 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-22. Processed: 3685 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250123.idx
+Successfully inserted 4408 records for 2025-01-23 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-23. Processed: 4029 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250124.idx
+Successfully inserted 4349 records for 2025-01-24 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-24. Processed: 3908 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250125.idx
+Access forbidden for 2025-01-25 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-01-25. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250126.idx
+Access forbidden for 2025-01-26 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-01-26. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250127.idx
+Successfully inserted 4458 records for 2025-01-27 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-27. Processed: 4228 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250128.idx
+Successfully inserted 5420 records for 2025-01-28 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-28. Processed: 5196 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250129.idx
+Successfully inserted 4457 records for 2025-01-29 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-29. Processed: 4309 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250130.idx
+Successfully inserted 5453 records for 2025-01-30 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-30. Processed: 5335 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250131.idx
+Successfully inserted 5623 records for 2025-01-31 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-01-31. Processed: 5366 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250201.idx
+Access forbidden for 2025-02-01 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-02-01. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250202.idx
+Access forbidden for 2025-02-02 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-02-02. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250203.idx
+Successfully inserted 5661 records for 2025-02-03 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-03. Processed: 5556 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250204.idx
+Successfully inserted 7458 records for 2025-02-04 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-04. Processed: 7369 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250205.idx
+Successfully inserted 5946 records for 2025-02-05 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-05. Processed: 5744 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250206.idx
+Successfully inserted 4665 records for 2025-02-06 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-06. Processed: 4545 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250207.idx
+Successfully inserted 5776 records for 2025-02-07 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-07. Processed: 5668 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250208.idx
+Access forbidden for 2025-02-08 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-02-08. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250209.idx
+Access forbidden for 2025-02-09 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-02-09. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250210.idx
+Successfully inserted 5346 records for 2025-02-10 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-10. Processed: 4995 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250211.idx
+Successfully inserted 5334 records for 2025-02-11 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-11. Processed: 5181 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250212.idx
+Successfully inserted 6741 records for 2025-02-12 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-12. Processed: 6492 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250213.idx
+Successfully inserted 7110 records for 2025-02-13 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-13. Processed: 6926 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250214.idx
+Successfully inserted 12265 records for 2025-02-14 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-14. Processed: 12090 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250215.idx
+Access forbidden for 2025-02-15 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-02-15. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250216.idx
+Access forbidden for 2025-02-16 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-02-16. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250217.idx
+Access forbidden for 2025-02-17 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-02-17. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250218.idx
+Successfully inserted 6311 records for 2025-02-18 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-18. Processed: 6090 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250219.idx
+Successfully inserted 7477 records for 2025-02-19 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-19. Processed: 7256 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250220.idx
+Successfully inserted 6582 records for 2025-02-20 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-20. Processed: 6373 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250221.idx
+Successfully inserted 6179 records for 2025-02-21 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-21. Processed: 5958 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250222.idx
+Access forbidden for 2025-02-22 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-02-22. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250223.idx
+Access forbidden for 2025-02-23 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-02-23. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250224.idx
+Successfully inserted 5531 records for 2025-02-24 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-24. Processed: 5417 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250225.idx
+Successfully inserted 7329 records for 2025-02-25 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-25. Processed: 7048 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250226.idx
+Successfully inserted 6710 records for 2025-02-26 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-26. Processed: 6497 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250227.idx
+Successfully inserted 8358 records for 2025-02-27 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-27. Processed: 8122 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250228.idx
+Successfully inserted 10164 records for 2025-02-28 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-02-28. Processed: 9817 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250301.idx
+Access forbidden for 2025-03-01 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-03-01. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250302.idx
+Access forbidden for 2025-03-02 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-03-02. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250303.idx
+Successfully inserted 8408 records for 2025-03-03 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-03. Processed: 8253 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250304.idx
+Successfully inserted 11780 records for 2025-03-04 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-04. Processed: 11658 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250305.idx
+Successfully inserted 7042 records for 2025-03-05 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-05. Processed: 6764 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250306.idx
+Successfully inserted 5279 records for 2025-03-06 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-06. Processed: 5094 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250307.idx
+Successfully inserted 6290 records for 2025-03-07 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-07. Processed: 6047 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250308.idx
+Access forbidden for 2025-03-08 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-03-08. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250309.idx
+Access forbidden for 2025-03-09 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-03-09. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250310.idx
+Successfully inserted 5071 records for 2025-03-10 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-10. Processed: 4813 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250311.idx
+Successfully inserted 5665 records for 2025-03-11 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-11. Processed: 5444 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250312.idx
+Successfully inserted 5170 records for 2025-03-12 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-12. Processed: 4928 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250313.idx
+Successfully inserted 4948 records for 2025-03-13 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-13. Processed: 4672 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250314.idx
+Successfully inserted 5800 records for 2025-03-14 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-14. Processed: 5540 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250315.idx
+Access forbidden for 2025-03-15 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-03-15. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250316.idx
+Access forbidden for 2025-03-16 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-03-16. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250317.idx
+Successfully inserted 5750 records for 2025-03-17 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-17. Processed: 5432 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250318.idx
+Successfully inserted 6490 records for 2025-03-18 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-18. Processed: 6227 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250319.idx
+Successfully inserted 4138 records for 2025-03-19 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-19. Processed: 3875 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250320.idx
+Successfully inserted 4496 records for 2025-03-20 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-20. Processed: 4237 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250321.idx
+Successfully inserted 4332 records for 2025-03-21 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-21. Processed: 4058 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250322.idx
+Access forbidden for 2025-03-22 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-03-22. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250323.idx
+Access forbidden for 2025-03-23 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-03-23. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250324.idx
+Successfully inserted 4019 records for 2025-03-24 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-24. Processed: 3700 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250325.idx
+Successfully inserted 4517 records for 2025-03-25 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-25. Processed: 4105 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250326.idx
+Successfully inserted 5044 records for 2025-03-26 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-26. Processed: 4651 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250327.idx
+Successfully inserted 5190 records for 2025-03-27 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-27. Processed: 4856 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250328.idx
+Successfully inserted 7028 records for 2025-03-28 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-28. Processed: 6366 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250329.idx
+Access forbidden for 2025-03-29 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-03-29. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250330.idx
+Access forbidden for 2025-03-30 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-03-30. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR1/master.20250331.idx
+Successfully inserted 6297 records for 2025-03-31 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-03-31. Processed: 5887 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250401.idx
+Successfully inserted 6582 records for 2025-04-01 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-01. Processed: 6354 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250402.idx
+Successfully inserted 7733 records for 2025-04-02 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-02. Processed: 7602 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250403.idx
+Successfully inserted 6485 records for 2025-04-03 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-03. Processed: 6294 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250404.idx
+Successfully inserted 4970 records for 2025-04-04 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-04. Processed: 4781 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250405.idx
+Access forbidden for 2025-04-05 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-04-05. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250406.idx
+Access forbidden for 2025-04-06 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-04-06. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250407.idx
+Successfully inserted 3930 records for 2025-04-07 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-07. Processed: 3801 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250408.idx
+Successfully inserted 4278 records for 2025-04-08 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-08. Processed: 4162 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250409.idx
+Successfully inserted 3092 records for 2025-04-09 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-09. Processed: 2929 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250410.idx
+Successfully inserted 3420 records for 2025-04-10 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-10. Processed: 3251 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250411.idx
+Successfully inserted 4883 records for 2025-04-11 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-11. Processed: 4427 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250412.idx
+Access forbidden for 2025-04-12 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-04-12. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250413.idx
+Access forbidden for 2025-04-13 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-04-13. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250414.idx
+Successfully inserted 3591 records for 2025-04-14 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-14. Processed: 3495 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250415.idx
+Successfully inserted 4420 records for 2025-04-15 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-15. Processed: 4242 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250416.idx
+Successfully inserted 3557 records for 2025-04-16 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-16. Processed: 3431 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250417.idx
+Successfully inserted 5568 records for 2025-04-17 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-17. Processed: 5391 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250418.idx
+Successfully inserted 2502 records for 2025-04-18 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-18. Processed: 2400 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250419.idx
+Access forbidden for 2025-04-19 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-04-19. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250420.idx
+Access forbidden for 2025-04-20 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-04-20. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250421.idx
+Successfully inserted 3540 records for 2025-04-21 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-21. Processed: 3331 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250422.idx
+Successfully inserted 4265 records for 2025-04-22 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-22. Processed: 3964 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250423.idx
+Successfully inserted 4802 records for 2025-04-23 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-23. Processed: 4644 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250424.idx
+Successfully inserted 5625 records for 2025-04-24 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-24. Processed: 5245 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250425.idx
+Successfully inserted 6286 records for 2025-04-25 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-25. Processed: 5940 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250426.idx
+Access forbidden for 2025-04-26 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-04-26. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250427.idx
+Access forbidden for 2025-04-27 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-04-27. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250428.idx
+Successfully inserted 6017 records for 2025-04-28 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-28. Processed: 5718 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250429.idx
+Successfully inserted 8180 records for 2025-04-29 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-29. Processed: 7888 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250430.idx
+Successfully inserted 8879 records for 2025-04-30 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-04-30. Processed: 8551 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250501.idx
+Successfully inserted 7701 records for 2025-05-01 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-01. Processed: 7582 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250502.idx
+Successfully inserted 6926 records for 2025-05-02 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-02. Processed: 6787 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250503.idx
+Access forbidden for 2025-05-03 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-05-03. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250504.idx
+Access forbidden for 2025-05-04 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-05-04. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250505.idx
+Successfully inserted 5266 records for 2025-05-05 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-05. Processed: 5177 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250506.idx
+Successfully inserted 5070 records for 2025-05-06 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-06. Processed: 4794 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250507.idx
+Successfully inserted 5431 records for 2025-05-07 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-07. Processed: 5297 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250508.idx
+Successfully inserted 5448 records for 2025-05-08 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-08. Processed: 5355 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250509.idx
+Successfully inserted 5467 records for 2025-05-09 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-09. Processed: 5306 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250510.idx
+Access forbidden for 2025-05-10 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-05-10. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250511.idx
+Access forbidden for 2025-05-11 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-05-11. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250512.idx
+Successfully inserted 5947 records for 2025-05-12 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-12. Processed: 5868 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250513.idx
+Successfully inserted 6847 records for 2025-05-13 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-13. Processed: 6654 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250514.idx
+Successfully inserted 7154 records for 2025-05-14 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-14. Processed: 6987 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250515.idx
+Successfully inserted 11119 records for 2025-05-15 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-15. Processed: 10953 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250516.idx
+Successfully inserted 5764 records for 2025-05-16 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-16. Processed: 5632 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250517.idx
+Access forbidden for 2025-05-17 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-05-17. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250518.idx
+Access forbidden for 2025-05-18 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-05-18. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250519.idx
+Successfully inserted 5545 records for 2025-05-19 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-19. Processed: 5496 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250520.idx
+Successfully inserted 4877 records for 2025-05-20 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-20. Processed: 4664 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250521.idx
+Successfully inserted 4040 records for 2025-05-21 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-21. Processed: 3888 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250522.idx
+Successfully inserted 5457 records for 2025-05-22 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-22. Processed: 5110 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250523.idx
+Successfully inserted 5629 records for 2025-05-23 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-23. Processed: 5420 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250524.idx
+Access forbidden for 2025-05-24 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-05-24. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250525.idx
+Access forbidden for 2025-05-25 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-05-25. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250526.idx
+Access forbidden for 2025-05-26 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-05-26. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250527.idx
+Successfully inserted 6044 records for 2025-05-27 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-27. Processed: 5986 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250528.idx
+Successfully inserted 5554 records for 2025-05-28 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-28. Processed: 5466 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250529.idx
+Successfully inserted 6831 records for 2025-05-29 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-29. Processed: 6649 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250530.idx
+Successfully inserted 6500 records for 2025-05-30 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-05-30. Processed: 6321 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250531.idx
+Access forbidden for 2025-05-31 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-05-31. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250601.idx
+Access forbidden for 2025-06-01 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-06-01. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250602.idx
+Successfully inserted 5110 records for 2025-06-02 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-02. Processed: 5029 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250603.idx
+Successfully inserted 6700 records for 2025-06-03 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-03. Processed: 6624 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250604.idx
+Successfully inserted 4456 records for 2025-06-04 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-04. Processed: 4398 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250605.idx
+Successfully inserted 4860 records for 2025-06-05 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-05. Processed: 4729 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250606.idx
+Successfully inserted 5367 records for 2025-06-06 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-06. Processed: 5256 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250607.idx
+Access forbidden for 2025-06-07 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-06-07. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250608.idx
+Access forbidden for 2025-06-08 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-06-08. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250609.idx
+Successfully inserted 4264 records for 2025-06-09 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-09. Processed: 4189 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250610.idx
+Successfully inserted 3753 records for 2025-06-10 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-10. Processed: 3643 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250611.idx
+Successfully inserted 3757 records for 2025-06-11 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-11. Processed: 3586 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250612.idx
+Successfully inserted 4310 records for 2025-06-12 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-12. Processed: 4147 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250613.idx
+Successfully inserted 5029 records for 2025-06-13 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-13. Processed: 4813 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250614.idx
+Access forbidden for 2025-06-14 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-06-14. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250615.idx
+Access forbidden for 2025-06-15 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-06-15. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250616.idx
+Successfully inserted 4606 records for 2025-06-16 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-16. Processed: 4481 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250617.idx
+Successfully inserted 4363 records for 2025-06-17 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-17. Processed: 4275 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250618.idx
+Successfully inserted 3776 records for 2025-06-18 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-18. Processed: 3673 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250619.idx
+Access forbidden for 2025-06-19 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-06-19. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250620.idx
+Successfully inserted 4671 records for 2025-06-20 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-20. Processed: 4551 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250621.idx
+Access forbidden for 2025-06-21 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-06-21. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250622.idx
+Access forbidden for 2025-06-22 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-06-22. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250623.idx
+Successfully inserted 3982 records for 2025-06-23 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-23. Processed: 3821 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250624.idx
+Successfully inserted 4063 records for 2025-06-24 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-24. Processed: 3928 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250625.idx
+Successfully inserted 3731 records for 2025-06-25 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-25. Processed: 3629 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250626.idx
+Successfully inserted 5059 records for 2025-06-26 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-26. Processed: 4956 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250627.idx
+Successfully inserted 6031 records for 2025-06-27 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-27. Processed: 5930 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250628.idx
+Access forbidden for 2025-06-28 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-06-28. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250629.idx
+Access forbidden for 2025-06-29 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-06-29. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR2/master.20250630.idx
+Successfully inserted 5356 records for 2025-06-30 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-06-30. Processed: 5264 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250701.idx
+Successfully inserted 5587 records for 2025-07-01 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-01. Processed: 5365 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250702.idx
+Successfully inserted 7630 records for 2025-07-02 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-02. Processed: 7446 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250703.idx
+Successfully inserted 4836 records for 2025-07-03 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-03. Processed: 4647 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250704.idx
+Access forbidden for 2025-07-04 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-07-04. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250705.idx
+Access forbidden for 2025-07-05 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-07-05. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250706.idx
+Access forbidden for 2025-07-06 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-07-06. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250707.idx
+Successfully inserted 3129 records for 2025-07-07 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-07. Processed: 2902 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250708.idx
+Successfully inserted 3111 records for 2025-07-08 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-08. Processed: 2943 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250709.idx
+Successfully inserted 2773 records for 2025-07-09 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-09. Processed: 2664 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250710.idx
+Successfully inserted 2835 records for 2025-07-10 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-10. Processed: 2762 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250711.idx
+Successfully inserted 3009 records for 2025-07-11 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-11. Processed: 2856 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250712.idx
+Access forbidden for 2025-07-12 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-07-12. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250713.idx
+Access forbidden for 2025-07-13 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-07-13. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250714.idx
+Successfully inserted 3146 records for 2025-07-14 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-14. Processed: 3064 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250715.idx
+Successfully inserted 3879 records for 2025-07-15 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-15. Processed: 3815 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250716.idx
+Successfully inserted 3138 records for 2025-07-16 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-16. Processed: 3071 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250717.idx
+Successfully inserted 4414 records for 2025-07-17 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-17. Processed: 4300 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250718.idx
+Successfully inserted 3321 records for 2025-07-18 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-18. Processed: 3164 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250719.idx
+Access forbidden for 2025-07-19 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-07-19. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250720.idx
+Access forbidden for 2025-07-20 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-07-20. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250721.idx
+Successfully inserted 3121 records for 2025-07-21 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-21. Processed: 3044 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250722.idx
+Successfully inserted 3295 records for 2025-07-22 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-22. Processed: 3122 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250723.idx
+Successfully inserted 3268 records for 2025-07-23 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-23. Processed: 3166 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250724.idx
+Successfully inserted 3721 records for 2025-07-24 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-24. Processed: 3499 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250725.idx
+Successfully inserted 3967 records for 2025-07-25 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-25. Processed: 3772 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250726.idx
+Access forbidden for 2025-07-26 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-07-26. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250727.idx
+Access forbidden for 2025-07-27 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-07-27. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250728.idx
+Successfully inserted 4166 records for 2025-07-28 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-28. Processed: 4057 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250729.idx
+Successfully inserted 6372 records for 2025-07-29 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-29. Processed: 6050 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250730.idx
+Successfully inserted 5205 records for 2025-07-30 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-30. Processed: 4897 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250731.idx
+Successfully inserted 5127 records for 2025-07-31 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-07-31. Processed: 4948 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250801.idx
+Successfully inserted 5211 records for 2025-08-01 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-01. Processed: 4984 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250802.idx
+Access forbidden for 2025-08-02 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-08-02. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250803.idx
+Access forbidden for 2025-08-03 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-08-03. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250804.idx
+Successfully inserted 5308 records for 2025-08-04 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-04. Processed: 5226 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250805.idx
+Successfully inserted 5889 records for 2025-08-05 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-05. Processed: 5581 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250806.idx
+Successfully inserted 5282 records for 2025-08-06 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-06. Processed: 4992 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250807.idx
+Successfully inserted 5654 records for 2025-08-07 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-07. Processed: 5421 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250808.idx
+Successfully inserted 4894 records for 2025-08-08 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-08. Processed: 4720 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250809.idx
+Access forbidden for 2025-08-09 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-08-09. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250810.idx
+Access forbidden for 2025-08-10 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-08-10. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250811.idx
+Successfully inserted 4616 records for 2025-08-11 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-11. Processed: 4402 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250812.idx
+Successfully inserted 6182 records for 2025-08-12 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-12. Processed: 6034 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250813.idx
+Successfully inserted 6400 records for 2025-08-13 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-13. Processed: 6138 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250814.idx
+Successfully inserted 10505 records for 2025-08-14 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-14. Processed: 10270 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250815.idx
+Successfully inserted 4993 records for 2025-08-15 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-15. Processed: 4690 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250816.idx
+Access forbidden for 2025-08-16 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-08-16. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250817.idx
+Access forbidden for 2025-08-17 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-08-17. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250818.idx
+Successfully inserted 3982 records for 2025-08-18 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-18. Processed: 3889 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250819.idx
+Successfully inserted 5241 records for 2025-08-19 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-19. Processed: 4856 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250820.idx
+Successfully inserted 4127 records for 2025-08-20 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-20. Processed: 3893 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250821.idx
+Successfully inserted 3758 records for 2025-08-21 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-21. Processed: 3619 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250822.idx
+Successfully inserted 4910 records for 2025-08-22 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-22. Processed: 4686 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250823.idx
+Access forbidden for 2025-08-23 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-08-23. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250824.idx
+Access forbidden for 2025-08-24 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-08-24. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250825.idx
+Successfully inserted 4639 records for 2025-08-25 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-25. Processed: 4468 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250826.idx
+Successfully inserted 5782 records for 2025-08-26 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-26. Processed: 5672 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250827.idx
+Successfully inserted 5981 records for 2025-08-27 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-27. Processed: 5620 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250828.idx
+Successfully inserted 7264 records for 2025-08-28 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-28. Processed: 7073 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250829.idx
+Successfully inserted 6679 records for 2025-08-29 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-08-29. Processed: 6428 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250830.idx
+Access forbidden for 2025-08-30 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-08-30. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250831.idx
+Access forbidden for 2025-08-31 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-08-31. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250901.idx
+Access forbidden for 2025-09-01 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-09-01. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250902.idx
+Successfully inserted 5859 records for 2025-09-02 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-02. Processed: 5580 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250903.idx
+Successfully inserted 6014 records for 2025-09-03 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-03. Processed: 5680 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250904.idx
+Successfully inserted 3949 records for 2025-09-04 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-04. Processed: 3809 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250905.idx
+Successfully inserted 3796 records for 2025-09-05 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-05. Processed: 3547 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250906.idx
+Access forbidden for 2025-09-06 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-09-06. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250907.idx
+Access forbidden for 2025-09-07 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-09-07. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250908.idx
+Successfully inserted 4322 records for 2025-09-08 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-08. Processed: 4268 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250909.idx
+Successfully inserted 3788 records for 2025-09-09 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-09. Processed: 3509 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250910.idx
+Successfully inserted 3222 records for 2025-09-10 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-10. Processed: 3119 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250911.idx
+Successfully inserted 3443 records for 2025-09-11 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-11. Processed: 3320 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250912.idx
+Successfully inserted 3942 records for 2025-09-12 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-12. Processed: 3723 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250913.idx
+Access forbidden for 2025-09-13 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-09-13. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250914.idx
+Access forbidden for 2025-09-14 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-09-14. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250915.idx
+Successfully inserted 3439 records for 2025-09-15 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-15. Processed: 3199 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250916.idx
+Successfully inserted 3690 records for 2025-09-16 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-16. Processed: 3615 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250917.idx
+Successfully inserted 3766 records for 2025-09-17 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-17. Processed: 3641 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250918.idx
+Successfully inserted 3419 records for 2025-09-18 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-18. Processed: 3233 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250919.idx
+Successfully inserted 3346 records for 2025-09-19 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-19. Processed: 3138 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250920.idx
+Access forbidden for 2025-09-20 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-09-20. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250921.idx
+Access forbidden for 2025-09-21 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-09-21. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250922.idx
+Successfully inserted 3801 records for 2025-09-22 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-22. Processed: 3371 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250923.idx
+Successfully inserted 3656 records for 2025-09-23 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-23. Processed: 3453 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250924.idx
+Successfully inserted 4076 records for 2025-09-24 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-24. Processed: 3826 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250925.idx
+Successfully inserted 4323 records for 2025-09-25 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-25. Processed: 3990 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250926.idx
+Successfully inserted 5356 records for 2025-09-26 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-26. Processed: 4980 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250927.idx
+Access forbidden for 2025-09-27 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-09-27. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250928.idx
+Access forbidden for 2025-09-28 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-09-28. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250929.idx
+Successfully inserted 5109 records for 2025-09-29 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-29. Processed: 4917 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR3/master.20250930.idx
+Successfully inserted 4745 records for 2025-09-30 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-09-30. Processed: 4566 records.
+--- Processing 2025-01-01 ---
+--- Processing 2025-01-02 ---
+--- Processing 2025-01-03 ---
+--- Processing 2025-01-04 ---
+--- Processing 2025-01-05 ---
+--- Processing 2025-01-06 ---
+--- Processing 2025-01-07 ---
+--- Processing 2025-01-08 ---
+--- Processing 2025-01-09 ---
+--- Processing 2025-01-10 ---
+--- Processing 2025-01-11 ---
+--- Processing 2025-01-12 ---
+--- Processing 2025-01-13 ---
+--- Processing 2025-01-14 ---
+--- Processing 2025-01-15 ---
+--- Processing 2025-01-16 ---
+--- Processing 2025-01-17 ---
+--- Processing 2025-01-18 ---
+--- Processing 2025-01-19 ---
+--- Processing 2025-01-20 ---
+--- Processing 2025-01-21 ---
+--- Processing 2025-01-22 ---
+--- Processing 2025-01-23 ---
+--- Processing 2025-01-24 ---
+--- Processing 2025-01-25 ---
+--- Processing 2025-01-26 ---
+--- Processing 2025-01-27 ---
+--- Processing 2025-01-28 ---
+--- Processing 2025-01-29 ---
+--- Processing 2025-01-30 ---
+--- Processing 2025-01-31 ---
+--- Processing 2025-02-01 ---
+--- Processing 2025-02-02 ---
+--- Processing 2025-02-03 ---
+--- Processing 2025-02-04 ---
+--- Processing 2025-02-05 ---
+--- Processing 2025-02-06 ---
+--- Processing 2025-02-07 ---
+--- Processing 2025-02-08 ---
+--- Processing 2025-02-09 ---
+--- Processing 2025-02-10 ---
+--- Processing 2025-02-11 ---
+--- Processing 2025-02-12 ---
+--- Processing 2025-02-13 ---
+--- Processing 2025-02-14 ---
+--- Processing 2025-02-15 ---
+--- Processing 2025-02-16 ---
+--- Processing 2025-02-17 ---
+--- Processing 2025-02-18 ---
+--- Processing 2025-02-19 ---
+--- Processing 2025-02-20 ---
+--- Processing 2025-02-21 ---
+--- Processing 2025-02-22 ---
+--- Processing 2025-02-23 ---
+--- Processing 2025-02-24 ---
+--- Processing 2025-02-25 ---
+--- Processing 2025-02-26 ---
+--- Processing 2025-02-27 ---
+--- Processing 2025-02-28 ---
+--- Processing 2025-03-01 ---
+--- Processing 2025-03-02 ---
+--- Processing 2025-03-03 ---
+--- Processing 2025-03-04 ---
+--- Processing 2025-03-05 ---
+--- Processing 2025-03-06 ---
+--- Processing 2025-03-07 ---
+--- Processing 2025-03-08 ---
+--- Processing 2025-03-09 ---
+--- Processing 2025-03-10 ---
+--- Processing 2025-03-11 ---
+--- Processing 2025-03-12 ---
+--- Processing 2025-03-13 ---
+--- Processing 2025-03-14 ---
+--- Processing 2025-03-15 ---
+--- Processing 2025-03-16 ---
+--- Processing 2025-03-17 ---
+--- Processing 2025-03-18 ---
+--- Processing 2025-03-19 ---
+--- Processing 2025-03-20 ---
+--- Processing 2025-03-21 ---
+--- Processing 2025-03-22 ---
+--- Processing 2025-03-23 ---
+--- Processing 2025-03-24 ---
+--- Processing 2025-03-25 ---
+--- Processing 2025-03-26 ---
+--- Processing 2025-03-27 ---
+--- Processing 2025-03-28 ---
+--- Processing 2025-03-29 ---
+--- Processing 2025-03-30 ---
+--- Processing 2025-03-31 ---
+--- Processing 2025-04-01 ---
+--- Processing 2025-04-02 ---
+--- Processing 2025-04-03 ---
+--- Processing 2025-04-04 ---
+--- Processing 2025-04-05 ---
+--- Processing 2025-04-06 ---
+--- Processing 2025-04-07 ---
+--- Processing 2025-04-08 ---
+--- Processing 2025-04-09 ---
+--- Processing 2025-04-10 ---
+--- Processing 2025-04-11 ---
+--- Processing 2025-04-12 ---
+--- Processing 2025-04-13 ---
+--- Processing 2025-04-14 ---
+--- Processing 2025-04-15 ---
+--- Processing 2025-04-16 ---
+--- Processing 2025-04-17 ---
+--- Processing 2025-04-18 ---
+--- Processing 2025-04-19 ---
+--- Processing 2025-04-20 ---
+--- Processing 2025-04-21 ---
+--- Processing 2025-04-22 ---
+--- Processing 2025-04-23 ---
+--- Processing 2025-04-24 ---
+--- Processing 2025-04-25 ---
+--- Processing 2025-04-26 ---
+--- Processing 2025-04-27 ---
+--- Processing 2025-04-28 ---
+--- Processing 2025-04-29 ---
+--- Processing 2025-04-30 ---
+--- Processing 2025-05-01 ---
+--- Processing 2025-05-02 ---
+--- Processing 2025-05-03 ---
+--- Processing 2025-05-04 ---
+--- Processing 2025-05-05 ---
+--- Processing 2025-05-06 ---
+--- Processing 2025-05-07 ---
+--- Processing 2025-05-08 ---
+--- Processing 2025-05-09 ---
+--- Processing 2025-05-10 ---
+--- Processing 2025-05-11 ---
+--- Processing 2025-05-12 ---
+--- Processing 2025-05-13 ---
+--- Processing 2025-05-14 ---
+--- Processing 2025-05-15 ---
+--- Processing 2025-05-16 ---
+--- Processing 2025-05-17 ---
+--- Processing 2025-05-18 ---
+--- Processing 2025-05-19 ---
+--- Processing 2025-05-20 ---
+--- Processing 2025-05-21 ---
+--- Processing 2025-05-22 ---
+--- Processing 2025-05-23 ---
+--- Processing 2025-05-24 ---
+--- Processing 2025-05-25 ---
+--- Processing 2025-05-26 ---
+--- Processing 2025-05-27 ---
+--- Processing 2025-05-28 ---
+--- Processing 2025-05-29 ---
+--- Processing 2025-05-30 ---
+--- Processing 2025-05-31 ---
+--- Processing 2025-06-01 ---
+--- Processing 2025-06-02 ---
+--- Processing 2025-06-03 ---
+--- Processing 2025-06-04 ---
+--- Processing 2025-06-05 ---
+--- Processing 2025-06-06 ---
+--- Processing 2025-06-07 ---
+--- Processing 2025-06-08 ---
+--- Processing 2025-06-09 ---
+--- Processing 2025-06-10 ---
+--- Processing 2025-06-11 ---
+--- Processing 2025-06-12 ---
+--- Processing 2025-06-13 ---
+--- Processing 2025-06-14 ---
+--- Processing 2025-06-15 ---
+--- Processing 2025-06-16 ---
+--- Processing 2025-06-17 ---
+--- Processing 2025-06-18 ---
+--- Processing 2025-06-19 ---
+--- Processing 2025-06-20 ---
+--- Processing 2025-06-21 ---
+--- Processing 2025-06-22 ---
+--- Processing 2025-06-23 ---
+--- Processing 2025-06-24 ---
+--- Processing 2025-06-25 ---
+--- Processing 2025-06-26 ---
+--- Processing 2025-06-27 ---
+--- Processing 2025-06-28 ---
+--- Processing 2025-06-29 ---
+--- Processing 2025-06-30 ---
+--- Processing 2025-07-01 ---
+--- Processing 2025-07-02 ---
+--- Processing 2025-07-03 ---
+--- Processing 2025-07-04 ---
+--- Processing 2025-07-05 ---
+--- Processing 2025-07-06 ---
+--- Processing 2025-07-07 ---
+--- Processing 2025-07-08 ---
+--- Processing 2025-07-09 ---
+--- Processing 2025-07-10 ---
+--- Processing 2025-07-11 ---
+--- Processing 2025-07-12 ---
+--- Processing 2025-07-13 ---
+--- Processing 2025-07-14 ---
+--- Processing 2025-07-15 ---
+--- Processing 2025-07-16 ---
+--- Processing 2025-07-17 ---
+--- Processing 2025-07-18 ---
+--- Processing 2025-07-19 ---
+--- Processing 2025-07-20 ---
+--- Processing 2025-07-21 ---
+--- Processing 2025-07-22 ---
+--- Processing 2025-07-23 ---
+--- Processing 2025-07-24 ---
+--- Processing 2025-07-25 ---
+--- Processing 2025-07-26 ---
+--- Processing 2025-07-27 ---
+--- Processing 2025-07-28 ---
+--- Processing 2025-07-29 ---
+--- Processing 2025-07-30 ---
+--- Processing 2025-07-31 ---
+--- Processing 2025-08-01 ---
+--- Processing 2025-08-02 ---
+--- Processing 2025-08-03 ---
+--- Processing 2025-08-04 ---
+--- Processing 2025-08-05 ---
+--- Processing 2025-08-06 ---
+--- Processing 2025-08-07 ---
+--- Processing 2025-08-08 ---
+--- Processing 2025-08-09 ---
+--- Processing 2025-08-10 ---
+--- Processing 2025-08-11 ---
+--- Processing 2025-08-12 ---
+--- Processing 2025-08-13 ---
+--- Processing 2025-08-14 ---
+--- Processing 2025-08-15 ---
+--- Processing 2025-08-16 ---
+--- Processing 2025-08-17 ---
+--- Processing 2025-08-18 ---
+--- Processing 2025-08-19 ---
+--- Processing 2025-08-20 ---
+--- Processing 2025-08-21 ---
+--- Processing 2025-08-22 ---
+--- Processing 2025-08-23 ---
+--- Processing 2025-08-24 ---
+--- Processing 2025-08-25 ---
+--- Processing 2025-08-26 ---
+--- Processing 2025-08-27 ---
+--- Processing 2025-08-28 ---
+--- Processing 2025-08-29 ---
+--- Processing 2025-08-30 ---
+--- Processing 2025-08-31 ---
+--- Processing 2025-09-01 ---
+--- Processing 2025-09-02 ---
+--- Processing 2025-09-03 ---
+--- Processing 2025-09-04 ---
+--- Processing 2025-09-05 ---
+--- Processing 2025-09-06 ---
+--- Processing 2025-09-07 ---
+--- Processing 2025-09-08 ---
+--- Processing 2025-09-09 ---
+--- Processing 2025-09-10 ---
+--- Processing 2025-09-11 ---
+--- Processing 2025-09-12 ---
+--- Processing 2025-09-13 ---
+--- Processing 2025-09-14 ---
+--- Processing 2025-09-15 ---
+--- Processing 2025-09-16 ---
+--- Processing 2025-09-17 ---
+--- Processing 2025-09-18 ---
+--- Processing 2025-09-19 ---
+--- Processing 2025-09-20 ---
+--- Processing 2025-09-21 ---
+--- Processing 2025-09-22 ---
+--- Processing 2025-09-23 ---
+--- Processing 2025-09-24 ---
+--- Processing 2025-09-25 ---
+--- Processing 2025-09-26 ---
+--- Processing 2025-09-27 ---
+--- Processing 2025-09-28 ---
+--- Processing 2025-09-29 ---
+--- Processing 2025-09-30 ---
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251001.idx
+Successfully inserted 5091 records for 2025-10-01 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-01. Processed: 4937 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251002.idx
+Successfully inserted 7201 records for 2025-10-02 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-02. Processed: 7164 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251003.idx
+Successfully inserted 5375 records for 2025-10-03 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-03. Processed: 5329 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251004.idx
+Access forbidden for 2025-10-04 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-10-04. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251005.idx
+Access forbidden for 2025-10-05 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-10-05. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251006.idx
+Successfully inserted 3205 records for 2025-10-06 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-06. Processed: 3173 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251007.idx
+Successfully inserted 3461 records for 2025-10-07 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-07. Processed: 3414 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251008.idx
+Successfully inserted 2729 records for 2025-10-08 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-08. Processed: 2693 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251009.idx
+Successfully inserted 2894 records for 2025-10-09 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-09. Processed: 2797 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251010.idx
+Successfully inserted 3118 records for 2025-10-10 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-10. Processed: 3049 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251011.idx
+Access forbidden for 2025-10-11 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-10-11. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251012.idx
+Access forbidden for 2025-10-12 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-10-12. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251013.idx
+Access forbidden for 2025-10-13 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-10-13. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251014.idx
+Successfully inserted 4590 records for 2025-10-14 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-14. Processed: 4514 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251015.idx
+Successfully inserted 3573 records for 2025-10-15 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-15. Processed: 3553 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251016.idx
+Successfully inserted 3089 records for 2025-10-16 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-16. Processed: 3035 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251017.idx
+Successfully inserted 3942 records for 2025-10-17 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-17. Processed: 3888 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251018.idx
+Access forbidden for 2025-10-18 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-10-18. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251019.idx
+Access forbidden for 2025-10-19 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-10-19. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251020.idx
+Successfully inserted 2808 records for 2025-10-20 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-20. Processed: 2778 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251021.idx
+Successfully inserted 3498 records for 2025-10-21 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-21. Processed: 3463 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251022.idx
+Successfully inserted 3198 records for 2025-10-22 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-22. Processed: 3152 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251023.idx
+Successfully inserted 3136 records for 2025-10-23 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-23. Processed: 3045 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251024.idx
+Successfully inserted 3372 records for 2025-10-24 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-24. Processed: 3257 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251025.idx
+Access forbidden for 2025-10-25 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-10-25. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251026.idx
+Access forbidden for 2025-10-26 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-10-26. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251027.idx
+Successfully inserted 3457 records for 2025-10-27 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-27. Processed: 3353 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251028.idx
+Successfully inserted 4701 records for 2025-10-28 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-28. Processed: 4615 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251029.idx
+Successfully inserted 4713 records for 2025-10-29 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-29. Processed: 4670 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251030.idx
+Successfully inserted 5926 records for 2025-10-30 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-30. Processed: 5882 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251031.idx
+Successfully inserted 4855 records for 2025-10-31 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-10-31. Processed: 4797 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251101.idx
+Access forbidden for 2025-11-01 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-01. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251102.idx
+Access forbidden for 2025-11-02 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-02. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251103.idx
+Successfully inserted 4918 records for 2025-11-03 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-03. Processed: 4893 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251104.idx
+Successfully inserted 6494 records for 2025-11-04 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-04. Processed: 6465 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251105.idx
+Successfully inserted 5234 records for 2025-11-05 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-05. Processed: 5208 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251106.idx
+Successfully inserted 5012 records for 2025-11-06 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-06. Processed: 4967 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251107.idx
+Successfully inserted 4949 records for 2025-11-07 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-07. Processed: 4904 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251108.idx
+Access forbidden for 2025-11-08 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-08. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251109.idx
+Access forbidden for 2025-11-09 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-09. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251110.idx
+Successfully inserted 4821 records for 2025-11-10 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-10. Processed: 4768 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251111.idx
+Access forbidden for 2025-11-11 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-11. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251112.idx
+Successfully inserted 8513 records for 2025-11-12 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-12. Processed: 8470 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251113.idx
+Successfully inserted 6663 records for 2025-11-13 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-13. Processed: 6442 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251114.idx
+Successfully inserted 10634 records for 2025-11-14 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-14. Processed: 10530 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251115.idx
+Access forbidden for 2025-11-15 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-15. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251116.idx
+Access forbidden for 2025-11-16 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-16. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251117.idx
+Successfully inserted 4424 records for 2025-11-17 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-17. Processed: 4325 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251118.idx
+Successfully inserted 4884 records for 2025-11-18 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-18. Processed: 4789 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251119.idx
+Successfully inserted 3674 records for 2025-11-19 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-19. Processed: 3609 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251120.idx
+Successfully inserted 3944 records for 2025-11-20 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-20. Processed: 3798 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251121.idx
+Successfully inserted 4278 records for 2025-11-21 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-21. Processed: 4112 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251122.idx
+Access forbidden for 2025-11-22 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-22. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251123.idx
+Access forbidden for 2025-11-23 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-23. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251124.idx
+Successfully inserted 4828 records for 2025-11-24 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-24. Processed: 4711 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251125.idx
+Successfully inserted 6500 records for 2025-11-25 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-25. Processed: 6369 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251126.idx
+Successfully inserted 7032 records for 2025-11-26 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-26. Processed: 6904 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251127.idx
+Access forbidden for 2025-11-27 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-27. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251128.idx
+Successfully inserted 4106 records for 2025-11-28 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-11-28. Processed: 4046 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251129.idx
+Access forbidden for 2025-11-29 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-29. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251130.idx
+Access forbidden for 2025-11-30 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-11-30. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251201.idx
+Successfully inserted 4962 records for 2025-12-01 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-01. Processed: 4891 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251202.idx
+Successfully inserted 4356 records for 2025-12-02 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-02. Processed: 4268 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251203.idx
+Successfully inserted 4709 records for 2025-12-03 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-03. Processed: 4590 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251204.idx
+Successfully inserted 3567 records for 2025-12-04 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-04. Processed: 3470 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251205.idx
+Successfully inserted 4400 records for 2025-12-05 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-05. Processed: 4250 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251206.idx
+Access forbidden for 2025-12-06 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-12-06. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251207.idx
+Access forbidden for 2025-12-07 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-12-07. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251208.idx
+Successfully inserted 3716 records for 2025-12-08 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-08. Processed: 3657 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251209.idx
+Successfully inserted 4014 records for 2025-12-09 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-09. Processed: 3878 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251210.idx
+Successfully inserted 3618 records for 2025-12-10 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-10. Processed: 3532 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251211.idx
+Successfully inserted 3986 records for 2025-12-11 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-11. Processed: 3828 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251212.idx
+Successfully inserted 4375 records for 2025-12-12 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-12. Processed: 4269 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251213.idx
+Access forbidden for 2025-12-13 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-12-13. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251214.idx
+Access forbidden for 2025-12-14 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-12-14. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251215.idx
+Successfully inserted 4426 records for 2025-12-15 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-15. Processed: 4352 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251216.idx
+Successfully inserted 4481 records for 2025-12-16 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-16. Processed: 4344 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251217.idx
+Successfully inserted 4717 records for 2025-12-17 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-17. Processed: 4426 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251218.idx
+Successfully inserted 4066 records for 2025-12-18 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-18. Processed: 3961 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251219.idx
+Successfully inserted 4781 records for 2025-12-19 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-19. Processed: 4543 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251220.idx
+Access forbidden for 2025-12-20 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-12-20. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251221.idx
+Access forbidden for 2025-12-21 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-12-21. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251222.idx
+Successfully inserted 4794 records for 2025-12-22 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-22. Processed: 4665 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251223.idx
+Successfully inserted 6634 records for 2025-12-23 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-23. Processed: 6399 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251224.idx
+Access forbidden for 2025-12-24 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-12-24. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251225.idx
+Access forbidden for 2025-12-25 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-12-25. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251226.idx
+Access forbidden for 2025-12-26 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-12-26. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251227.idx
+Access forbidden for 2025-12-27 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-12-27. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251228.idx
+Access forbidden for 2025-12-28 (403). It might be a holiday or the URL is unavailable.
+Successfully cleaned EDGAR data for 2025-12-28. Processed: 0 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251229.idx
+Successfully inserted 7328 records for 2025-12-29 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-29. Processed: 7164 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251230.idx
+Successfully inserted 4324 records for 2025-12-30 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-30. Processed: 4197 records.
+Fetching EDGAR daily index from: https://www.sec.gov/Archives/edgar/daily-index/2025/QTR4/master.20251231.idx
+Successfully inserted 3084 records for 2025-12-31 into raw_edgar_daily.
+Successfully cleaned EDGAR data for 2025-12-31. Processed: 2978 records.
+Successfully updated core_edgar_filings table in MotherDuck!
+Successfully updated report_filings_by_ticker view in MotherDuck!
+--- Processing 2025-10-01 ---
+--- Processing 2025-10-02 ---
+--- Processing 2025-10-03 ---
+--- Processing 2025-10-04 ---
+--- Processing 2025-10-05 ---
+--- Processing 2025-10-06 ---
+--- Processing 2025-10-07 ---
+--- Processing 2025-10-08 ---
+--- Processing 2025-10-09 ---
+--- Processing 2025-10-10 ---
+--- Processing 2025-10-11 ---
+--- Processing 2025-10-12 ---
+--- Processing 2025-10-13 ---
+--- Processing 2025-10-14 ---
+--- Processing 2025-10-15 ---
+--- Processing 2025-10-16 ---
+--- Processing 2025-10-17 ---
+--- Processing 2025-10-18 ---
+--- Processing 2025-10-19 ---
+--- Processing 2025-10-20 ---
+--- Processing 2025-10-21 ---
+--- Processing 2025-10-22 ---
+--- Processing 2025-10-23 ---
+--- Processing 2025-10-24 ---
+--- Processing 2025-10-25 ---
+--- Processing 2025-10-26 ---
+--- Processing 2025-10-27 ---
+--- Processing 2025-10-28 ---
+--- Processing 2025-10-29 ---
+--- Processing 2025-10-30 ---
+--- Processing 2025-10-31 ---
+--- Processing 2025-11-01 ---
+--- Processing 2025-11-02 ---
+--- Processing 2025-11-03 ---
+--- Processing 2025-11-04 ---
+--- Processing 2025-11-05 ---
+--- Processing 2025-11-06 ---
+--- Processing 2025-11-07 ---
+--- Processing 2025-11-08 ---
+--- Processing 2025-11-09 ---
+--- Processing 2025-11-10 ---
+--- Processing 2025-11-11 ---
+--- Processing 2025-11-12 ---
+--- Processing 2025-11-13 ---
+--- Processing 2025-11-14 ---
+--- Processing 2025-11-15 ---
+--- Processing 2025-11-16 ---
+--- Processing 2025-11-17 ---
+--- Processing 2025-11-18 ---
+--- Processing 2025-11-19 ---
+--- Processing 2025-11-20 ---
+--- Processing 2025-11-21 ---
+--- Processing 2025-11-22 ---
+--- Processing 2025-11-23 ---
+--- Processing 2025-11-24 ---
+--- Processing 2025-11-25 ---
+--- Processing 2025-11-26 ---
+--- Processing 2025-11-27 ---
+--- Processing 2025-11-28 ---
+--- Processing 2025-11-29 ---
+--- Processing 2025-11-30 ---
+--- Processing 2025-12-01 ---
+--- Processing 2025-12-02 ---
+--- Processing 2025-12-03 ---
+--- Processing 2025-12-04 ---
+--- Processing 2025-12-05 ---
+--- Processing 2025-12-06 ---
+--- Processing 2025-12-07 ---
+--- Processing 2025-12-08 ---
+--- Processing 2025-12-09 ---
+--- Processing 2025-12-10 ---
+--- Processing 2025-12-11 ---
+--- Processing 2025-12-12 ---
+--- Processing 2025-12-13 ---
+--- Processing 2025-12-14 ---
+--- Processing 2025-12-15 ---
+--- Processing 2025-12-16 ---
+--- Processing 2025-12-17 ---
+--- Processing 2025-12-18 ---
+--- Processing 2025-12-19 ---
+--- Processing 2025-12-20 ---
+--- Processing 2025-12-21 ---
+--- Processing 2025-12-22 ---
+--- Processing 2025-12-23 ---
+--- Processing 2025-12-24 ---
+--- Processing 2025-12-25 ---
+--- Processing 2025-12-26 ---
+--- Processing 2025-12-27 ---
+--- Processing 2025-12-28 ---
+--- Processing 2025-12-29 ---
+--- Processing 2025-12-30 ---
+--- Processing 2025-12-31 ---
+Updating core materializations and views...
+Completed backfill for 2025!

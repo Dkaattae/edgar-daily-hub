@@ -28,12 +28,21 @@ def main():
         "User-Agent": "DataPipelineRunner <pipeline@example.com>"
     }
     
-    resp = requests.get(url, headers=headers)
-    if resp.status_code != 200:
-        if resp.status_code == 404:
-            print(f"No filing index found for {date_str} (404).")
-            return
-        resp.raise_for_status()
+    try:
+        resp = requests.get(url, headers=headers)
+        if resp.status_code != 200:
+            if resp.status_code == 404:
+                print(f"No filing index found for {date_str} (404).")
+                return
+            elif resp.status_code == 403:
+                print(f"Access forbidden for {date_str} (403). It might be a holiday or the URL is unavailable.")
+                return
+            else:
+                print(f"Failed to fetch data for {date_str}: HTTP {resp.status_code}")
+                return
+    except requests.exceptions.RequestException as e:
+        print(f"Request failed for {date_str}: {e}")
+        return
         
     lines = resp.text.split("\n")
     data_lines = []
@@ -82,6 +91,21 @@ def main():
     conn.execute("INSERT INTO raw_edgar_daily SELECT * FROM df")
     
     print(f"Successfully inserted {len(df)} records for {date_str} into raw_edgar_daily.")
+    
+    # Cleanup local duckdb data
+    try:
+        local_db_path = "/workspaces/edgar-daily-hub/pipeline.db"
+        if os.path.exists(local_db_path):
+            local_conn = duckdb.connect(local_db_path)
+            # check if table exists before deleting
+            tables = [r[0] for r in local_conn.execute("SHOW TABLES").fetchall()]
+            if 'raw_edgar_daily' in tables:
+                local_conn.execute(f"DELETE FROM raw_edgar_daily WHERE date_filed = '{date_formatted}'")
+                print(f"Deleted local data for {date_str} from pipeline.db.")
+            local_conn.close()
+    except Exception as e:
+        print(f"Could not clean local data: {e}")
+
     conn.close()
 
 if __name__ == "__main__":
