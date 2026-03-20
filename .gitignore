@@ -5,3 +5,7 @@ __pycache__/
 *.py[cod]
 logs/queries
 .env
+# Virtual Environments
+venv/
+backend/venv/
+data-pipeline/venv/
