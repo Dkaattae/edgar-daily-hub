@@ -1,5 +1,7 @@
 # EDGAR Daily Hub
 
+🚀 **Live:** [https://edgar-daily-hub.fly.dev](https://edgar-daily-hub.fly.dev)
+
 ## Problem
 
 The SEC EDGAR system processes thousands of filings every business day, but there's no easy way to monitor filing volumes over time or track specific companies you care about. Analysts and researchers who want to spot unusual activity — like the massive surge in Form 3 "Initial Statement of Beneficial Ownership" filings observed in March 2026 — have to do this manually.
