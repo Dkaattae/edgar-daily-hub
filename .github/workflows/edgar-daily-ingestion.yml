@@ -2,8 +2,8 @@ name: Daily EDGAR Ingestion
 
 on:
   schedule:
-    # Run daily at 11:00 PM UTC (7:00 PM Eastern), an optimal time after the SEC posts daily indices
-    - cron: '0 23 * * *'
+    # Run Tue-Sat at 2:00 AM Eastern (6:00 AM UTC), after SEC posts daily indices
+    - cron: '0 6 * * 2-6'
   workflow_dispatch: # Allows you to manually trigger it via the GitHub Actions UI button
 
 jobs:
@@ -19,22 +19,21 @@ jobs:
         with:
           python-version: '3.11'
           
+      - name: Install Bruin
+        run: |
+          curl -s https://get.bruin-data.com/install.sh | bash
+          export PATH="$HOME/.bruin/bin:$PATH"
+          
       - name: Install Pipeline Dependencies
         run: |
           pip install requests pandas duckdb
           
-      - name: Run Daily EDGAR Ingestion and Clean
+      - name: Run Daily EDGAR Ingestion Pipeline
         working-directory: ./data-pipeline
         env:
           # Pulls securely from GitHub Actions Secrets
           MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
         run: |
-          # When run without BRUIN_START_DATE, the scripts naturally default to the current day.
-          echo "Starting Data Ingestion..."
-          python assets/edgar_daily_ingestion.py
-          
-          echo "Starting Data Cleaning..."
-          python assets/clean_edgar_data.py
-          
-          echo "Rebuilding MotherDuck Materializations..."
-          python update_view.py
+          # Run the full Bruin pipeline
+          export PATH="$HOME/.bruin/bin:$PATH"
+          bruin run .
