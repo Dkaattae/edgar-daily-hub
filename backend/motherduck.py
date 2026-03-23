@@ -5,7 +5,7 @@ import uuid
 
 def get_md_conn():
     token = os.getenv("MOTHERDUCK_TOKEN")
-    return duckdb.connect(f"md:?motherduck_token={token}" if token else "md:")
+    return duckdb.connect(f"md:?motherduck_token={token}" if token else ":memory:")
 
 def format_date(date_str: str) -> str:
     """Converts YYYYMMDD to YYYY-MM-DD."""
