@@ -9,3 +9,5 @@ logs/queries
 venv/
 backend/venv/
 data-pipeline/venv/
+# Node modules
+node_modules/
