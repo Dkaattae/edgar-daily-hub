@@ -19,10 +19,8 @@ jobs:
         with:
           python-version: '3.11'
           
-      - name: Install Bruin
-        run: |
-          curl -s https://get.bruin-data.com/install.sh | bash
-          export PATH="$HOME/.bruin/bin:$PATH"
+      - name: Setup Bruin
+        uses: bruin-data/setup-bruin@main
           
       - name: Install Pipeline Dependencies
         run: |
@@ -35,5 +33,4 @@ jobs:
           MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
         run: |
           # Run the full Bruin pipeline
-          export PATH="$HOME/.bruin/bin:$PATH"
           bruin run .
