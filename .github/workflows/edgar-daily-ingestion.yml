@@ -23,8 +23,9 @@ jobs:
         uses: bruin-data/setup-bruin@main
           
       - name: Install Pipeline Dependencies
+        working-directory: ./data-pipeline
         run: |
-          pip install requests pandas duckdb
+          pip install -r requirements.txt
           
       - name: Run Daily EDGAR Ingestion Pipeline
         working-directory: ./data-pipeline
