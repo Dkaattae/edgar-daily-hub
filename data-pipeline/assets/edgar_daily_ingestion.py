@@ -25,7 +25,9 @@ def main():
     print(f"Fetching EDGAR daily index from: {url}")
     
     headers = {
-        "User-Agent": "DataPipelineRunner <pipeline@example.com>"
+        "User-Agent": "Fresco Analytics xchencws@gmail.com",
+        "Accept-Encoding": "gzip, deflate",
+        "Host": "www.sec.gov"
     }
     
     try:

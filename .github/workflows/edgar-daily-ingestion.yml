@@ -34,4 +34,4 @@ jobs:
           MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
         run: |
           # Run the full Bruin pipeline
-          bruin run .
+          bruin run . --config-file .bruin.yml
