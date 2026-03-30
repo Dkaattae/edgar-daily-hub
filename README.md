@@ -85,6 +85,16 @@ npm install && npm run dev
 python -c "import database; database.Base.metadata.create_all(database.engine)"
 ```
 
+### 6. Supabase security (row-level security)
+
+To prevent `rls_disabled_in_public` and restrict PostgREST access to per-user data, run:
+
+```bash
+psql "$DATABASE_URL" -f backend/supabase_rls.sql
+```
+
+Or execute the SQL block in Supabase SQL editor.
+
 ---
 
 ## Deploying to Fly.io

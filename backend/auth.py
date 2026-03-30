@@ -1,20 +1,30 @@
-import bcrypt
-import jwt
-import datetime
+from supabase import create_client
+import os
 
-SECRET_KEY = "SUPER_SECRET_KEY_FOR_EDGAR"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60
+supabase = create_client(os.environ["DATABASE_URL"], os.environ["SUPABASE_ANON_KEY"])
 
-def verify_password(plain_password: str, hashed_password: str) -> bool:
-    return bcrypt.checkpw(plain_password.encode('utf-8'), hashed_password.encode('utf-8'))
+def sign_up(email: str, password: str, username: str):
+    # 1. Create auth user in Supabase Auth
+    res = supabase.auth.sign_up({"email": email, "password": password})
+    user = res.user
 
-def get_password_hash(password: str) -> str:
-    salt = bcrypt.gensalt()
-    return bcrypt.hashpw(password.encode('utf-8'), salt).decode('utf-8')
+    # 2. Insert profile row in public.users linked to auth_id
+    supabase.table("users").insert({
+        "username": username,
+        "auth_id": str(user.id)
+    }).execute()
 
-def create_access_token(data: dict, expires_delta: datetime.timedelta = None):
-    to_encode = data.copy()
-    expire = datetime.datetime.now(datetime.timezone.utc) + (expires_delta if expires_delta else datetime.timedelta(minutes=60))
-    to_encode.update({"exp": expire})
-    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return user
+
+def sign_in(email: str, password: str):
+    res = supabase.auth.sign_in_with_password({"email": email, "password": password})
+    # res.session.access_token is the JWT — store this client-side
+    return res.session
+
+def sign_out(jwt: str):
+    supabase.auth.sign_out()
+
+def get_current_user(jwt: str):
+    # Verify the token and return the user
+    res = supabase.auth.get_user(jwt)
+    return res.user
