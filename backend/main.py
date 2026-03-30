@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
-from fastapi.security import OAuth2PasswordBearer
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 import jwt
 
 import models, database, auth, motherduck
@@ -28,47 +28,66 @@ def health_check():
     return {"status": "healthy"}
 
 
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
+security = HTTPBearer()
 
-def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(database.get_db)):
+def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security), db: Session = Depends(database.get_db)):
     try:
-        payload = jwt.decode(token, auth.SECRET_KEY, algorithms=[auth.ALGORITHM])
-        username: str = payload.get("sub")
-        if username is None:
+        token = credentials.credentials
+        print(f"Verifying token: {token[:50]}...")  # Log first 50 chars for debugging
+        
+        # Verify Supabase JWT token
+        user_info = auth.get_current_user(token)
+        print(f"User info: {user_info}")
+        
+        if not user_info:
+            print("No user info returned")
             raise HTTPException(status_code=401, detail="Invalid auth credentials")
-    except jwt.PyJWTError:
+        
+        # Find user in our database by auth_id
+        user = db.query(database.User).filter(database.User.auth_id == str(user_info.id)).first()
+        print(f"Database user: {user}")
+        
+        if user is None:
+            # Auto-create user in local database if they don't exist
+            username = user_info.email or f"user_{str(user_info.id)[:8]}"
+            print(f"Creating new user: {username}")
+            new_user = database.User(
+                username=username,
+                auth_id=str(user_info.id)
+            )
+            db.add(new_user)
+            db.commit()
+            db.refresh(new_user)
+            user = new_user
+        
+        return user
+    except Exception as e:
+        print(f"Auth error: {e}")
         raise HTTPException(status_code=401, detail="Invalid auth credentials")
-    
-    user = db.query(database.User).filter(database.User.username == username).first()
-    if user is None:
-        raise HTTPException(status_code=401, detail="User not found")
-    return user
 
-@app.post("/api/auth/login", response_model=models.Token)
-def login(request: models.LoginRequest, db: Session = Depends(database.get_db)):
-    user = db.query(database.User).filter(database.User.username == request.username).first()
-    if not user or not auth.verify_password(request.password, user.password_hash):
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Incorrect username or password")
-    
-    access_token = auth.create_access_token(data={"sub": user.username})
-    return {"access_token": access_token, "token_type": "bearer"}
-
-@app.post("/api/auth/register", response_model=models.Token)
+@app.post("/api/auth/register")
 def register(request: models.UserCreate, db: Session = Depends(database.get_db)):
-    db_user = db.query(database.User).filter(database.User.username == request.username).first()
-    if db_user:
-        raise HTTPException(status_code=400, detail="Username already registered")
-    
-    new_user = database.User(
-        username=request.username,
-        password_hash=auth.get_password_hash(request.password)
-    )
-    db.add(new_user)
-    db.commit()
-    db.refresh(new_user)
-    
-    access_token = auth.create_access_token(data={"sub": new_user.username})
-    return {"access_token": access_token, "token_type": "bearer"}
+    try:
+        # Use Supabase auth to create user
+        user = auth.sign_up(request.username, request.password, request.username)  # email=username for simplicity
+        
+        # User profile should already be created by auth.sign_up
+        return {"message": "User registered successfully"}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Registration failed: {str(e)}")
+
+@app.post("/api/auth/login")
+def login(request: models.LoginRequest):
+    try:
+        # Use Supabase auth to sign in
+        session = auth.sign_in(request.username, request.password)  # email=username
+        return {
+            "access_token": session.access_token,
+            "token_type": "bearer",
+            "refresh_token": session.refresh_token
+        }
+    except Exception as e:
+        raise HTTPException(status_code=401, detail=f"Login failed: {str(e)}")
 
 @app.get("/api/reports/daily-count", response_model=list[models.DailyCount])
 def get_daily_count(user: database.User = Depends(get_current_user)):

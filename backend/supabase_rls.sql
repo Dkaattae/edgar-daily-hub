@@ -12,20 +12,28 @@ ALTER TABLE IF EXISTS public.watchlist_tickers FORCE ROW LEVEL SECURITY;
 
 -- users: allow users to read their own user profile
 CREATE POLICY "users_select_own" ON public.users
-  FOR SELECT USING (auth.uid()::text = id::text);
+  FOR SELECT USING (auth_id = auth.uid()::text);
 
 -- watchlist_tickers: allow users to view, insert, update, delete their own rows
 CREATE POLICY "watchlist_select_own" ON public.watchlist_tickers
-  FOR SELECT USING (user_id = auth.uid()::int);
+  FOR SELECT USING (user_id = (
+    SELECT id FROM public.users WHERE auth_id = auth.uid()
+  ));
 
 CREATE POLICY "watchlist_insert_own" ON public.watchlist_tickers
-  FOR INSERT WITH CHECK (user_id = auth.uid()::int);
+  FOR INSERT WITH CHECK (user_id = (
+    SELECT id FROM public.users WHERE auth_id = auth.uid()
+  ));
 
 CREATE POLICY "watchlist_update_own" ON public.watchlist_tickers
-  FOR UPDATE USING (user_id = auth.uid()::int);
+  FOR UPDATE USING (user_id = (
+    SELECT id FROM public.users WHERE auth_id = auth.uid()
+  ));
 
 CREATE POLICY "watchlist_delete_own" ON public.watchlist_tickers
-  FOR DELETE USING (user_id = auth.uid()::int);
+  FOR DELETE USING (user_id = (
+    SELECT id FROM public.users WHERE auth_id = auth.uid()
+  ));
 
 -- Optionally, explicitly disable public role on these tables in Supabase
 REVOKE ALL ON public.users FROM public;

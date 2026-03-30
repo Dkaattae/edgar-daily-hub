@@ -56,6 +56,15 @@ MOTHERDUCK_TOKEN=your_motherduck_token
 DATABASE_URL=postgresql://user:password@host:5432/dbname
 ```
 
+Create a `.env` file in the `frontend/` directory:
+
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+**Note:** Vite requires environment variables to be prefixed with `VITE_` to be accessible in the browser. If you have `SUPABASE_URL` and `SUPABASE_ANON_KEY` set in your Codespace environment, the app will automatically try to use those as fallbacks, but for proper Vite builds, use the `VITE_` prefixed versions.
+
 ### 3. Run with Docker (recommended)
 
 ```bash

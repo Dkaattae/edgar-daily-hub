@@ -1,7 +1,23 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import AppNav from "../AppNav";
+
+// Mock the API functions
+vi.mock("../../lib/api", () => ({
+  getUsername: vi.fn().mockResolvedValue("test@example.com"),
+  logout: vi.fn(),
+}));
+
+// Mock Supabase
+vi.mock("../../lib/supabase", () => ({
+  supabase: {
+    auth: {
+      getSession: vi.fn().mockResolvedValue({ data: { session: { access_token: "mock-token" } } }),
+      signOut: vi.fn().mockResolvedValue({ error: null }),
+    },
+  },
+}));
 
 const renderNav = () =>
   render(
@@ -10,23 +26,26 @@ const renderNav = () =>
     </MemoryRouter>
   );
 
-describe("AppNav login button", () => {
-  it("shows Log in button by default", () => {
-    renderNav();
-    expect(screen.getByRole("button", { name: /log in/i })).toBeInTheDocument();
+describe("AppNav", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
   });
 
-  it("switches to logged-in state on click", () => {
+  it("shows username and Log out button when authenticated", async () => {
     renderNav();
-    fireEvent.click(screen.getByRole("button", { name: /log in/i }));
-    expect(screen.getByText("mock_user")).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText("test@example.com")).toBeInTheDocument();
+    });
     expect(screen.getByRole("button", { name: /log out/i })).toBeInTheDocument();
   });
 
-  it("logs out when Log out is clicked", () => {
+  it("calls logout when Log out button is clicked", async () => {
+    const { logout } = await import("../../lib/api");
     renderNav();
-    fireEvent.click(screen.getByRole("button", { name: /log in/i }));
+    await waitFor(() => {
+      expect(screen.getByRole("button", { name: /log out/i })).toBeInTheDocument();
+    });
     fireEvent.click(screen.getByRole("button", { name: /log out/i }));
-    expect(screen.getByRole("button", { name: /log in/i })).toBeInTheDocument();
+    expect(logout).toHaveBeenCalled();
   });
 });

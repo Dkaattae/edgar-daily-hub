@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { LayoutDashboard, Eye, LogOut, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { logout, getUsername } from "@/lib/api";
+import { useEffect, useState } from "react";
 
 const links = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -10,6 +11,11 @@ const links = [
 
 const AppNav = () => {
   const { pathname } = useLocation();
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    getUsername().then(setUsername);
+  }, []);
 
   return (
     <header className="border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-50">
@@ -42,7 +48,7 @@ const AppNav = () => {
           <div className="flex items-center gap-2">
             <span className="flex items-center gap-1.5 text-sm text-foreground">
               <User className="h-4 w-4 text-primary" />
-              <span className="font-mono">{getUsername()}</span>
+              <span className="font-mono">{username}</span>
             </span>
             <Button variant="ghost" size="sm" onClick={logout} aria-label="Log out">
               <LogOut className="h-4 w-4" />

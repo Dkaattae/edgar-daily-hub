@@ -1,14 +1,15 @@
 import axios from "axios";
 import { Filing } from "../data/types";
+import { supabase } from "./supabase";
 
 const api = axios.create({
-  baseURL: "/api", 
+  baseURL: "/api",
 });
 
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
+api.interceptors.request.use(async (config) => {
+  const { data: { session } } = await supabase.auth.getSession();
+  if (session?.access_token) {
+    config.headers.Authorization = `Bearer ${session.access_token}`;
   }
   return config;
 });
@@ -23,33 +24,43 @@ api.interceptors.response.use(
   }
 );
 
-export const login = async (username: string, password: string) => {
-  const { data } = await axios.post("/api/auth/login", { username, password });
-  localStorage.setItem("token", data.access_token);
+export const login = async (email: string, password: string) => {
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  });
+
+  if (error) {
+    throw error;
+  }
+
   return data;
 };
 
-export const register = async (username: string, password: string) => {
-  const { data } = await axios.post("/api/auth/register", { username, password });
-  localStorage.setItem("token", data.access_token);
+export const register = async (email: string, password: string) => {
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+  });
+
+  if (error) {
+    throw error;
+  }
+
   return data;
 };
 
-
-export const logout = () => {
-  localStorage.removeItem("token");
+export const logout = async () => {
+  const { error } = await supabase.auth.signOut();
+  if (error) {
+    console.error('Error signing out:', error);
+  }
   window.location.href = "/login";
 };
 
-export const getUsername = (): string => {
-  const token = localStorage.getItem("token");
-  if (!token) return "";
-  try {
-    const payload = JSON.parse(atob(token.split(".")[1]));
-    return payload.sub ?? "";
-  } catch {
-    return "";
-  }
+export const getUsername = async (): Promise<string> => {
+  const { data: { user } } = await supabase.auth.getUser();
+  return user?.email || "";
 };
 
 export const fetchDailyCounts = async () => {

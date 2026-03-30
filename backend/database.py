@@ -15,7 +15,7 @@ class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String(50), unique=True, index=True, nullable=False)
-    password_hash = Column(String(255), nullable=False)
+    auth_id = Column(String(36), unique=True, index=True, nullable=False)  # Supabase UUID
 
 class WatchlistTicker(Base):
     __tablename__ = "watchlist_tickers"
