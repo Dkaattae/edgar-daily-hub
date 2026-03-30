@@ -4,12 +4,19 @@ primary_region = "iad"
 [build]
   dockerfile = "Dockerfile"
 
+  [build.args]
+    # These are the public/publishable Supabase keys — safe to commit.
+    # Vite bakes them into the frontend bundle at Docker build time.
+    VITE_SUPABASE_URL = "https://ukzumhdqqsqsutaolckx.supabase.co"
+    VITE_SUPABASE_ANON_KEY = "sb_publishable_Gx6Nz-FDx3XXt83H9TDQyw_Phe_NszC"
+
 [http_service]
   internal_port = 8000
   force_https = true
-  auto_stop_machines = "stop"
-  auto_start_machines = true
-  min_machines_running = 0
+  auto_stop_machines = "stop"   # machine sleeps when idle (serverless-style)
+  auto_start_machines = true    # machine wakes on first request
+  min_machines_running = 0      # no always-on machines — zero cost when idle
+  max_machines_running = 1      # never scale beyond 1 machine
 
   [[http_service.checks]]
     grace_period = "10s"
@@ -25,3 +32,6 @@ primary_region = "iad"
   memory = "512mb"
   cpu_kind = "shared"
   cpus = 1
+
+[mounts]
+  snapshot_retention = 1  # keep volume snapshots for 1 day

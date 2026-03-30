@@ -34,33 +34,43 @@ def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(securit
     try:
         token = credentials.credentials
         print(f"Verifying token: {token[:50]}...")  # Log first 50 chars for debugging
-        
+
         # Verify Supabase JWT token
         user_info = auth.get_current_user(token)
-        print(f"User info: {user_info}")
-        
+
         if not user_info:
-            print("No user info returned")
             raise HTTPException(status_code=401, detail="Invalid auth credentials")
-        
+
         # Find user in our database by auth_id
         user = db.query(database.User).filter(database.User.auth_id == str(user_info.id)).first()
-        print(f"Database user: {user}")
-        
+
         if user is None:
-            # Auto-create user in local database if they don't exist
+            # Auto-create user in local database if they don't exist.
+            # Guard against a race condition: two concurrent requests (e.g. daily-count
+            # and all-daily-counts on dashboard load) can both see user=None and both
+            # attempt an INSERT, causing a UniqueViolation on the second one.
             username = user_info.email or f"user_{str(user_info.id)[:8]}"
             print(f"Creating new user: {username}")
-            new_user = database.User(
-                username=username,
-                auth_id=str(user_info.id)
-            )
-            db.add(new_user)
-            db.commit()
-            db.refresh(new_user)
-            user = new_user
-        
+            try:
+                new_user = database.User(
+                    username=username,
+                    auth_id=str(user_info.id)
+                )
+                db.add(new_user)
+                db.commit()
+                db.refresh(new_user)
+                user = new_user
+            except Exception:
+                # Another concurrent request already inserted this user — roll back
+                # and re-fetch instead of propagating the constraint violation as a 401.
+                db.rollback()
+                user = db.query(database.User).filter(database.User.auth_id == str(user_info.id)).first()
+                if user is None:
+                    raise HTTPException(status_code=500, detail="Could not create or find user")
+
         return user
+    except HTTPException:
+        raise
     except Exception as e:
         print(f"Auth error: {e}")
         raise HTTPException(status_code=401, detail="Invalid auth credentials")
