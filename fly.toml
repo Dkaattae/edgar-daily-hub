@@ -33,5 +33,3 @@ primary_region = "iad"
   cpu_kind = "shared"
   cpus = 1
 
-[mounts]
-  snapshot_retention = 1  # keep volume snapshots for 1 day
