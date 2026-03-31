@@ -1,6 +1,7 @@
 """ @bruin
 name: clean_edgar_data
 type: python
+schedule: daily
 depends:
   - edgar_daily_ingestion
 @bruin """

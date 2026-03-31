@@ -1,6 +1,7 @@
 /* @bruin
 name: core_edgar_filings
 type: duckdb.sql
+schedule: daily
 depends:
   - clean_edgar_data
   - ticker_seed_ingestion
@@ -23,6 +24,6 @@ SELECT
     e.cik_str,
     t.ticker,
     t.title AS ticker_company_title
-FROM my_db.main.clean_edgar_daily e
-LEFT JOIN my_db.main.raw_company_tickers t 
+FROM clean_edgar_daily e
+LEFT JOIN raw_company_tickers t 
   ON e.cik_num = t.cik_str;

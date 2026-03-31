@@ -1,6 +1,7 @@
 """ @bruin
 name: edgar_daily_ingestion
 type: python
+schedule: daily
 depends: []
 @bruin """
 

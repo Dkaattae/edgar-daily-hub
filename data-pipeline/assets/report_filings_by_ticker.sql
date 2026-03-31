@@ -1,6 +1,7 @@
 /* @bruin
 name: report_filings_by_ticker
 type: duckdb.sql
+schedule: daily
 depends:
   - core_edgar_filings
 materialization:

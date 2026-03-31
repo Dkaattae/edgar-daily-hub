@@ -1,6 +1,7 @@
 """ @bruin
 name: ticker_seed_ingestion
 type: python
+schedule: daily
 depends: []
 @bruin """
 

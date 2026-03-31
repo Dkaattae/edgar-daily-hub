@@ -1,6 +1,7 @@
 /* @bruin
 name: report_daily_filing_count
 type: duckdb.sql
+schedule: daily
 depends:
   - core_edgar_filings
 materialization:
