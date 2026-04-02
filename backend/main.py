@@ -2,15 +2,24 @@ from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from pathlib import Path
+import os
 import jwt
 
 import models, database, auth, motherduck
 
 app = FastAPI(title="EDGAR Data Pipeline API")
 
+ALLOWED_ORIGINS = [
+    "https://edgar-daily-hub.fly.dev",
+]
+# Allow localhost during development
+if os.environ.get("ENVIRONMENT") != "production":
+    ALLOWED_ORIGINS += ["http://localhost:5173", "http://localhost:8080", "http://localhost:3000"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -33,8 +42,6 @@ security = HTTPBearer()
 def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security), db: Session = Depends(database.get_db)):
     try:
         token = credentials.credentials
-        print(f"Verifying token: {token[:50]}...")  # Log first 50 chars for debugging
-
         # Verify Supabase JWT token
         user_info = auth.get_current_user(token)
 
@@ -140,22 +147,22 @@ def remove_from_watchlist(ticker: str, user: database.User = Depends(get_current
     db.commit()
 
 
-import os
-frontend_dist = os.path.join(os.path.dirname(__file__), "frontend/dist")
+frontend_dist = Path(__file__).parent / "frontend" / "dist"
 
-if os.path.exists(os.path.join(frontend_dist, "assets")):
-    app.mount("/assets", StaticFiles(directory=os.path.join(frontend_dist, "assets")), name="assets")
+if (frontend_dist / "assets").exists():
+    app.mount("/assets", StaticFiles(directory=str(frontend_dist / "assets")), name="assets")
 
 @app.get("/{full_path:path}")
 async def serve_react_app(full_path: str):
-    file_path = os.path.join(frontend_dist, full_path)
-    if os.path.exists(file_path) and os.path.isfile(file_path):
-        return FileResponse(file_path)
-    
-    index_path = os.path.join(frontend_dist, "index.html")
-    if os.path.exists(index_path):
+    # Resolve the requested path and ensure it stays within frontend_dist
+    requested = (frontend_dist / full_path).resolve()
+    if requested.is_file() and str(requested).startswith(str(frontend_dist.resolve())):
+        return FileResponse(requested)
+
+    index_path = frontend_dist / "index.html"
+    if index_path.exists():
         return FileResponse(index_path)
-        
+
     return {"message": "Frontend build not found. Be sure to compile the React app into frontend/dist."}
 
 

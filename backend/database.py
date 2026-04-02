@@ -3,7 +3,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 
 import os
 
-SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://admin:password123@db:5432/edgar_auth")
+SQLALCHEMY_DATABASE_URL = os.environ["DATABASE_URL"]
 # Supabase / Heroku emit postgres:// but SQLAlchemy requires postgresql://
 SQLALCHEMY_DATABASE_URL = SQLALCHEMY_DATABASE_URL.replace("postgres://", "postgresql://", 1)
 

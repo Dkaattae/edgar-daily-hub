@@ -3,4 +3,4 @@ environments:
     connections:
       duckdb:
         - name: "motherduck"
-          path: "md:?motherduck_token={{ env \"MOTHERDUCK_TOKEN\" }}"
+          path: "md:my_db?motherduck_token={{ env \"MOTHERDUCK_TOKEN\" }}"
