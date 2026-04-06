@@ -18,7 +18,7 @@ def main():
     date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d")
     date_formatted = date_obj.strftime("%Y%m%d")
     
-    conn = duckdb.connect('md:')
+    conn = duckdb.connect('md:my_db')
     
     # Create table if it doesn't exist (with correct schema incl. is_amendment)
     conn.execute('''

@@ -1,6 +1,7 @@
 environments:
   default:
     connections:
-      duckdb:
+      motherduck:
         - name: "motherduck"
-          path: "md:my_db?motherduck_token={{ env \"MOTHERDUCK_TOKEN\" }}"
+          token: ${MOTHERDUCK_TOKEN}
+          database: my_db

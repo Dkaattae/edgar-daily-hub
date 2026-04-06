@@ -74,7 +74,7 @@ def main():
     df["filename"] = df["filename"].str.strip()
     
     # Connect to duckdb and insert
-    conn = duckdb.connect('md:')
+    conn = duckdb.connect('md:my_db')
     
     # create table if not exists with correct schema
     conn.execute('''

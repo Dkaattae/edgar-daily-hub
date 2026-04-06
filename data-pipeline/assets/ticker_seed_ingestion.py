@@ -32,7 +32,7 @@ def main():
     df = pd.DataFrame(records)
     print(f"Parsed {len(df)} tickers.")
     
-    conn = duckdb.connect('md:')
+    conn = duckdb.connect('md:my_db')
     
     conn.execute("DROP TABLE IF EXISTS raw_company_tickers")
     conn.execute('''
