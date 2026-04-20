@@ -1,25 +1,33 @@
 import { useState, useEffect } from "react";
 import { login } from "@/lib/api";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { toast } from "sonner";
 import { supabase } from "@/lib/supabase";
+import { Session } from "@supabase/supabase-js";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  // `undefined` = still checking; `null` = confirmed signed out; Session = signed in.
+  // Don't render the form until we know — avoids flashing a login form over an
+  // already-authenticated user before the redirect fires.
+  const [session, setSession] = useState<Session | null | undefined>(undefined);
   const navigate = useNavigate();
+  const location = useLocation();
+  const redirectTo = (location.state as { from?: string } | null)?.from || "/";
 
   useEffect(() => {
-    // Check if user is already logged in
-    const checkSession = async () => {
-      const { data: { session } } = await supabase.auth.getSession();
-      if (session) {
-        navigate("/");
-      }
-    };
-    checkSession();
-  }, [navigate]);
+    supabase.auth.getSession().then(({ data: { session } }) => setSession(session));
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (_event, session) => setSession(session)
+    );
+    return () => subscription.unsubscribe();
+  }, []);
+
+  useEffect(() => {
+    if (session) navigate(redirectTo, { replace: true });
+  }, [session, navigate, redirectTo]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,14 +35,11 @@ const Login = () => {
     try {
       await login(email, password);
 
-      // Wait for auth state to be confirmed
-      const { data: { session }, error } = await supabase.auth.getSession();
-      if (error) {
-        throw error;
-      }
-      if (session) {
+      const { data: { session: newSession }, error } = await supabase.auth.getSession();
+      if (error) throw error;
+      if (newSession) {
         toast.success("Logged in successfully");
-        navigate("/");
+        navigate(redirectTo, { replace: true });
       } else {
         throw new Error("Session not established");
       }
@@ -44,6 +49,10 @@ const Login = () => {
       setLoading(false);
     }
   };
+
+  if (session === undefined || session) {
+    return <div className="flex items-center justify-center min-h-screen">Loading...</div>;
+  }
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
