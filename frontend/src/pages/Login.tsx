@@ -18,9 +18,15 @@ const Login = () => {
   const redirectTo = (location.state as { from?: string } | null)?.from || "/";
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => setSession(session));
+    let initialized = false;
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      initialized = true;
+      setSession(session);
+    });
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (_event, session) => setSession(session)
+      (_event, session) => {
+        if (initialized) setSession(session);
+      }
     );
     return () => subscription.unsubscribe();
   }, []);

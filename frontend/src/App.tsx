@@ -20,11 +20,18 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
 
   useEffect(() => {
+    let initialized = false;
     supabase.auth.getSession().then(({ data: { session } }) => {
+      initialized = true;
       setSession(session);
     });
+    // Ignore auth-state-change events until getSession() has established the
+    // initial truth — otherwise an early null event can bounce an authenticated
+    // user before localStorage hydration completes.
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (_event, session) => setSession(session)
+      (_event, session) => {
+        if (initialized) setSession(session);
+      }
     );
     return () => subscription.unsubscribe();
   }, []);
