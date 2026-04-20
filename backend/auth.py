@@ -4,7 +4,8 @@ import jwt
 
 SUPABASE_URL = os.environ["SUPABASE_URL"]
 SUPABASE_ANON_KEY = os.environ["SUPABASE_ANON_KEY"]
-SUPABASE_JWT_SECRET = os.environ["SUPABASE_JWT_SECRET"]
+# Optional: only used as a fast-path for legacy HS256 tokens.
+SUPABASE_JWT_SECRET = os.environ.get("SUPABASE_JWT_SECRET")
 
 supabase = create_client(SUPABASE_URL, SUPABASE_ANON_KEY)
 
@@ -34,23 +35,35 @@ class AuthenticatedUser:
         self.email = email
 
 def get_current_user(access_token: str):
-    try:
-        payload = jwt.decode(
-            access_token,
-            SUPABASE_JWT_SECRET,
-            algorithms=["HS256"],
-            audience="authenticated",
-        )
+    """Validate an access token and return the authenticated user.
 
-        user_id = payload.get('sub')
-        email = payload.get('email')
-
-        if not user_id:
+    Tries local HS256 decode first (fast path for legacy symmetric-secret
+    Supabase projects). If that fails — which it does for projects on the newer
+    asymmetric (RS256/ES256 via JWKS) signing keys — falls back to asking the
+    Supabase Auth API to validate the token.
+    """
+    if SUPABASE_JWT_SECRET:
+        try:
+            payload = jwt.decode(
+                access_token,
+                SUPABASE_JWT_SECRET,
+                algorithms=["HS256"],
+                audience="authenticated",
+            )
+            user_id = payload.get("sub")
+            if user_id:
+                return AuthenticatedUser(user_id, payload.get("email"))
+        except jwt.ExpiredSignatureError:
             return None
+        except jwt.InvalidTokenError:
+            pass  # fall through to Supabase API validation
 
-        return AuthenticatedUser(user_id, email)
-
-    except jwt.ExpiredSignatureError:
-        return None
-    except jwt.InvalidTokenError:
+    try:
+        res = supabase.auth.get_user(access_token)
+        user = getattr(res, "user", None)
+        if not user or not getattr(user, "id", None):
+            return None
+        return AuthenticatedUser(str(user.id), getattr(user, "email", None))
+    except Exception as e:
+        print(f"Supabase token validation failed: {e}")
         return None
