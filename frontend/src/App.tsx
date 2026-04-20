@@ -16,33 +16,27 @@ import SignUp from "@/pages/SignUp";
 const queryClient = new QueryClient();
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
-  const [session, setSession] = useState<Session | null>(null);
-  const [loading, setLoading] = useState(true);
+  // `undefined` = unknown (still loading), `null` = confirmed no session.
+  // Never redirect until getSession() has resolved, otherwise onAuthStateChange
+  // firing INITIAL_SESSION before localStorage hydrates can bounce us to /login.
+  const [session, setSession] = useState<Session | null | undefined>(undefined);
 
   useEffect(() => {
-    // Get initial session
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
-      setLoading(false);
     });
-
-    // Listen for auth changes
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-      setLoading(false);
-    });
-
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (_event, session) => setSession(session)
+    );
     return () => subscription.unsubscribe();
   }, []);
 
-  if (loading) {
+  if (session === undefined) {
     return <div className="flex items-center justify-center min-h-screen">Loading...</div>;
   }
 
-  if (!session) {
-    return <Navigate to="/login" />;
+  if (session === null) {
+    return <Navigate to="/login" replace />;
   }
 
   return <>{children}</>;
