@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes, Navigate, useLocation } from "react-router-dom";
+import { setPostLoginRedirect } from "@/lib/authRedirect";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -41,7 +42,8 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   }
 
   if (session === null) {
-    return <Navigate to="/login" replace state={{ from: location.pathname }} />;
+    setPostLoginRedirect(location.pathname);
+    return <Navigate to="/login" replace />;
   }
 
   return <>{children}</>;
