@@ -7,18 +7,10 @@ vi.mock("../../lib/api", () => ({
   logout: vi.fn(),
 }));
 
-const getSessionMock = vi.fn();
+const useAuthMock = vi.fn();
 
-vi.mock("../../lib/supabase", () => ({
-  supabase: {
-    auth: {
-      getSession: (...args: unknown[]) => getSessionMock(...args),
-      onAuthStateChange: vi.fn().mockReturnValue({
-        data: { subscription: { unsubscribe: vi.fn() } },
-      }),
-      signOut: vi.fn().mockResolvedValue({ error: null }),
-    },
-  },
+vi.mock("../../lib/auth", () => ({
+  useAuth: () => useAuthMock(),
 }));
 
 const renderNav = () =>
@@ -34,8 +26,8 @@ describe("AppNav", () => {
   });
 
   it("shows username and Log out button when authenticated", async () => {
-    getSessionMock.mockResolvedValue({
-      data: { session: { access_token: "mock-token", user: { email: "test@example.com" } } },
+    useAuthMock.mockReturnValue({
+      session: { access_token: "mock-token", user: { email: "test@example.com" } },
     });
     renderNav();
     await waitFor(() => {
@@ -45,8 +37,8 @@ describe("AppNav", () => {
   });
 
   it("calls logout when Log out button is clicked", async () => {
-    getSessionMock.mockResolvedValue({
-      data: { session: { access_token: "mock-token", user: { email: "test@example.com" } } },
+    useAuthMock.mockReturnValue({
+      session: { access_token: "mock-token", user: { email: "test@example.com" } },
     });
     const { logout } = await import("../../lib/api");
     renderNav();
@@ -58,7 +50,7 @@ describe("AppNav", () => {
   });
 
   it("shows Log in button when unauthenticated", async () => {
-    getSessionMock.mockResolvedValue({ data: { session: null } });
+    useAuthMock.mockReturnValue({ session: null });
     renderNav();
     await waitFor(() => {
       expect(screen.getByRole("link", { name: /log in/i })).toBeInTheDocument();

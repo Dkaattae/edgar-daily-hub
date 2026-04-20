@@ -2,9 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { LayoutDashboard, Eye, LogOut, User, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { logout } from "@/lib/api";
-import { supabase } from "@/lib/supabase";
-import { useEffect, useState } from "react";
-import { Session } from "@supabase/supabase-js";
+import { useAuth } from "@/lib/auth";
 
 const links = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -13,16 +11,7 @@ const links = [
 
 const AppNav = () => {
   const { pathname } = useLocation();
-  const [session, setSession] = useState<Session | null>(null);
-
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => setSession(session));
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (_event, session) => setSession(session)
-    );
-    return () => subscription.unsubscribe();
-  }, []);
-
+  const { session } = useAuth();
   const username = session?.user?.email || "";
 
   return (

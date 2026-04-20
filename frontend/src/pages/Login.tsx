@@ -2,33 +2,15 @@ import { useState, useEffect } from "react";
 import { login } from "@/lib/api";
 import { useNavigate, Link } from "react-router-dom";
 import { toast } from "sonner";
-import { supabase } from "@/lib/supabase";
-import { Session } from "@supabase/supabase-js";
+import { useAuth } from "@/lib/auth";
 import { consumePostLoginRedirect } from "@/lib/authRedirect";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  // `undefined` = still checking; `null` = confirmed signed out; Session = signed in.
-  // Don't render the form until we know — avoids flashing a login form over an
-  // already-authenticated user before the redirect fires.
-  const [session, setSession] = useState<Session | null | undefined>(undefined);
+  const { session } = useAuth();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    let initialized = false;
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      initialized = true;
-      setSession(session);
-    });
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
-        if (initialized) setSession(session);
-      }
-    );
-    return () => subscription.unsubscribe();
-  }, []);
 
   useEffect(() => {
     if (session) navigate(consumePostLoginRedirect(), { replace: true });
