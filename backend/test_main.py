@@ -2,16 +2,22 @@ import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.pool import StaticPool
 import os
 from unittest.mock import patch, MagicMock
 
-from backend.main import app
-from backend import motherduck, database
-from backend.database import Base, get_db, User
+from main import app
+import motherduck
+import database
+from database import Base, get_db, User
 
 # Set up dedicated test database (in-memory SQLite)
 SQLALCHEMY_DATABASE_URL = "sqlite:///:memory:"
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
+engine = create_engine(
+    SQLALCHEMY_DATABASE_URL,
+    connect_args={"check_same_thread": False},
+    poolclass=StaticPool,
+)
 TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 def override_get_db():
@@ -37,13 +43,36 @@ def setup_db():
     yield
     Base.metadata.drop_all(bind=engine)
 
-def test_unauthorized_dashboard():
+def test_unauthorized_watchlist():
+    response = client.get("/api/watchlist")
+    assert response.status_code == 401
+
+def test_public_daily_count():
+    """Dashboard daily-count endpoint is accessible without auth."""
     response = client.get("/api/reports/daily-count")
+    assert response.status_code == 200
+    assert isinstance(response.json(), list)
+
+def test_public_all_daily_counts():
+    """Dashboard all-daily-counts endpoint is accessible without auth."""
+    response = client.get("/api/reports/all-daily-counts")
+    assert response.status_code == 200
+    assert isinstance(response.json(), list)
+
+def test_public_dashboard_ignores_invalid_token():
+    """Public dashboard endpoints don't 401 even with a malformed auth header."""
+    headers = {"Authorization": "Bearer not-a-real-token"}
+    response = client.get("/api/reports/daily-count", headers=headers)
+    assert response.status_code == 200
+
+def test_ticker_filings_still_protected():
+    """by-ticker endpoint still requires auth."""
+    response = client.get("/api/reports/by-ticker?tickers=AAPL")
     assert response.status_code == 401
 
 def test_login_failure():
     # Mock Supabase auth failure
-    with patch('backend.auth.sign_in') as mock_sign_in:
+    with patch('auth.sign_in') as mock_sign_in:
         mock_sign_in.side_effect = Exception("Invalid credentials")
         response = client.post("/api/auth/login", json={"username": "admin", "password": "wrongpassword"})
         assert response.status_code == 401
@@ -54,7 +83,7 @@ def test_login_success():
     mock_session.access_token = "test-jwt-token"
     mock_session.refresh_token = "test-refresh-token"
     
-    with patch('backend.auth.sign_in') as mock_sign_in:
+    with patch('auth.sign_in') as mock_sign_in:
         mock_sign_in.return_value = mock_session
         response = client.post("/api/auth/login", json={"username": "admin", "password": "password123"})
         assert response.status_code == 200
@@ -68,19 +97,79 @@ def test_authorized_dashboard():
     mock_user = MagicMock()
     mock_user.id = "test-auth-uuid-12345"
     
-    with patch('backend.auth.get_current_user') as mock_get_user:
+    with patch('auth.get_current_user') as mock_get_user:
         mock_get_user.return_value = mock_user
         headers = {"Authorization": "Bearer test-jwt-token"}
         response = client.get("/api/reports/daily-count", headers=headers)
         assert response.status_code == 200
         assert isinstance(response.json(), list)
 
+def test_add_watchlist_rejects_unknown_ticker():
+    """POST /api/watchlist/{ticker} should 404 if ticker isn't in the SEC seed table."""
+    mock_user = MagicMock()
+    mock_user.id = "test-auth-uuid-12345"
+
+    with patch('auth.get_current_user') as mock_get_user, \
+         patch('motherduck.ticker_exists') as mock_valid:
+        mock_get_user.return_value = mock_user
+        mock_valid.return_value = False
+        headers = {"Authorization": "Bearer test-jwt-token"}
+        response = client.post("/api/watchlist/NOTREAL", headers=headers)
+        assert response.status_code == 404
+        assert "not a known" in response.json()["detail"].lower()
+
+def test_add_watchlist_enforces_max_limit(monkeypatch):
+    """Adding beyond WATCHLIST_MAX_TICKERS should 400 with a clear message."""
+    import main
+    monkeypatch.setattr(main, "WATCHLIST_MAX_TICKERS", 3)
+
+    mock_user = MagicMock()
+    mock_user.id = "test-auth-uuid-12345"
+
+    with patch('auth.get_current_user') as mock_get_user, \
+         patch('motherduck.ticker_exists') as mock_valid:
+        mock_get_user.return_value = mock_user
+        mock_valid.return_value = True
+        headers = {"Authorization": "Bearer test-jwt-token"}
+
+        for t in ["AAA", "BBB", "CCC"]:
+            resp = client.post(f"/api/watchlist/{t}", headers=headers)
+            assert resp.status_code == 201
+
+        resp = client.post("/api/watchlist/DDD", headers=headers)
+        assert resp.status_code == 400
+        assert "limit" in resp.json()["detail"].lower()
+        assert "3" in resp.json()["detail"]
+
+        # Adding one already on the list stays a no-op and doesn't trip the limit.
+        resp = client.post("/api/watchlist/AAA", headers=headers)
+        assert resp.status_code == 201
+
+def test_add_watchlist_accepts_known_ticker():
+    """POST /api/watchlist/{ticker} should 201 and persist when ticker is valid."""
+    mock_user = MagicMock()
+    mock_user.id = "test-auth-uuid-12345"
+
+    with patch('auth.get_current_user') as mock_get_user, \
+         patch('motherduck.ticker_exists') as mock_valid:
+        mock_get_user.return_value = mock_user
+        mock_valid.return_value = True
+        headers = {"Authorization": "Bearer test-jwt-token"}
+        response = client.post("/api/watchlist/AAPL", headers=headers)
+        assert response.status_code == 201
+        assert response.json()["ticker"] == "AAPL"
+
+        # Confirm it was actually stored
+        list_resp = client.get("/api/watchlist", headers=headers)
+        assert list_resp.status_code == 200
+        assert "AAPL" in list_resp.json()
+
 def test_authorized_ticker_filings():
     # Mock Supabase user verification
     mock_user = MagicMock()
     mock_user.id = "test-auth-uuid-12345"
     
-    with patch('backend.auth.get_current_user') as mock_get_user:
+    with patch('auth.get_current_user') as mock_get_user:
         mock_get_user.return_value = mock_user
         headers = {"Authorization": "Bearer test-jwt-token"}
         response = client.get("/api/reports/by-ticker?tickers=AAPL,MSFT", headers=headers)
@@ -129,7 +218,7 @@ def test_watchlist_deduplicates_duplicate_tickers():
     mock_user = MagicMock()
     mock_user.id = "test-auth-uuid-12345"
     
-    with patch('backend.auth.get_current_user') as mock_get_user:
+    with patch('auth.get_current_user') as mock_get_user:
         mock_get_user.return_value = mock_user
         headers = {"Authorization": "Bearer test-jwt-token"}
         
@@ -157,7 +246,7 @@ def test_watchlist_handles_case_insensitivity():
     mock_user = MagicMock()
     mock_user.id = "test-auth-uuid-12345"
     
-    with patch('backend.auth.get_current_user') as mock_get_user:
+    with patch('auth.get_current_user') as mock_get_user:
         mock_get_user.return_value = mock_user
         headers = {"Authorization": "Bearer test-jwt-token"}
         
@@ -182,35 +271,27 @@ def test_watchlist_handles_case_insensitivity():
 
 # ========== Invalid Ticker Tests ==========
 
-def test_watchlist_accepts_any_ticker_format():
-    """Test that watchlist accepts invalid/non-existent tickers without breaking"""
-    # Mock Supabase user verification
+def test_watchlist_rejects_bulk_unknown_tickers():
+    """Unknown tickers should all be rejected with 404 and never persisted."""
     mock_user = MagicMock()
     mock_user.id = "test-auth-uuid-12345"
-    
-    with patch('backend.auth.get_current_user') as mock_get_user:
+
+    with patch('auth.get_current_user') as mock_get_user, \
+         patch('motherduck.ticker_exists') as mock_valid:
         mock_get_user.return_value = mock_user
+        mock_valid.return_value = False
         headers = {"Authorization": "Bearer test-jwt-token"}
-        
-        # Add invalid tickers
+
         invalid_tickers = ["INVALID123", "NOTREAL", "XYZ", "A", "12345"]
-        
         for ticker in invalid_tickers:
             response = client.post(f"/api/watchlist/{ticker}", headers=headers)
-            # Should accept any format without breaking
-            assert response.status_code == 201, f"Failed to add invalid ticker {ticker}"
-        
-        # Get watchlist - should contain all tickers
+            assert response.status_code == 404, f"Expected 404 for unknown ticker {ticker}"
+
         response = client.get("/api/watchlist", headers=headers)
         assert response.status_code == 200
         watchlist = response.json()
-        
         for ticker in invalid_tickers:
-            assert ticker in watchlist, f"Expected {ticker} in watchlist"
-        
-        # Cleanup
-        for ticker in invalid_tickers:
-            client.delete(f"/api/watchlist/{ticker}", headers=headers)
+            assert ticker not in watchlist, f"Unexpected {ticker} persisted in watchlist"
 
 def test_fetch_filings_with_invalid_tickers_returns_empty():
     """Test that fetching filings with invalid tickers doesn't break, returns empty list"""
@@ -218,7 +299,7 @@ def test_fetch_filings_with_invalid_tickers_returns_empty():
     mock_user = MagicMock()
     mock_user.id = "test-auth-uuid-12345"
     
-    with patch('backend.auth.get_current_user') as mock_get_user:
+    with patch('auth.get_current_user') as mock_get_user:
         mock_get_user.return_value = mock_user
         headers = {"Authorization": "Bearer test-jwt-token"}
         
@@ -238,7 +319,7 @@ def test_fetch_filings_with_mixed_valid_invalid_tickers():
     mock_user = MagicMock()
     mock_user.id = "test-auth-uuid-12345"
     
-    with patch('backend.auth.get_current_user') as mock_get_user:
+    with patch('auth.get_current_user') as mock_get_user:
         mock_get_user.return_value = mock_user
         headers = {"Authorization": "Bearer test-jwt-token"}
         
@@ -252,53 +333,44 @@ def test_fetch_filings_with_mixed_valid_invalid_tickers():
         # May contain filings for valid tickers only
 
 def test_watchlist_with_special_characters_in_ticker():
-    """Test that watchlist handles special characters gracefully"""
-    # Mock Supabase user verification
+    """Special-character tickers aren't in the SEC seed table, so they 404 cleanly."""
     mock_user = MagicMock()
     mock_user.id = "test-auth-uuid-12345"
-    
-    with patch('backend.auth.get_current_user') as mock_get_user:
+
+    with patch('auth.get_current_user') as mock_get_user, \
+         patch('motherduck.ticker_exists') as mock_valid:
         mock_get_user.return_value = mock_user
+        mock_valid.return_value = False
         headers = {"Authorization": "Bearer test-jwt-token"}
-    
-    # Try adding tickers with special characters
-    special_tickers = ["@TEST", "TEST-1", "TEST.COM", "TEST_A"]
-    
-    for ticker in special_tickers:
-        response = client.post(f"/api/watchlist/{ticker}", headers=headers)
-        # Should handle without crashing (may reject or accept)
-        assert response.status_code in [201, 400, 422], f"Unexpected status for {ticker}"
-    
-    # Cleanup - attempt to remove what was added
-    response = client.get("/api/watchlist", headers=headers)
-    if response.status_code == 200:
-        watchlist = response.json()
-        for ticker in watchlist:
-            if any(s in ticker for s in special_tickers):
-                client.delete(f"/api/watchlist/{ticker}", headers=headers)
+
+        special_tickers = ["@TEST", "TEST-1", "TEST.COM", "TEST_A"]
+        for ticker in special_tickers:
+            response = client.post(f"/api/watchlist/{ticker}", headers=headers)
+            assert response.status_code in [404, 400, 422], f"Unexpected status for {ticker}"
 
 # ========== New API Connection Edge Case Tests ==========
 
 def test_register_duplicate_username():
     """Test that registering an existing user returns 400"""
-    # The 'admin' user is created by setup_db fixture
-    response = client.post("/api/auth/register", json={"username": "admin", "password": "newpassword"})
-    assert response.status_code == 400
-    assert "already registered" in response.json()["detail"].lower()
+    with patch('auth.sign_up') as mock_sign_up:
+        mock_sign_up.side_effect = Exception("User already registered")
+        response = client.post("/api/auth/register", json={"username": "admin@example.com", "password": "newpassword"})
+        assert response.status_code == 400
+        assert "already registered" in response.json()["detail"].lower()
 
 def test_access_without_token():
     """Test accessing protected route without a token returns 401"""
-    response = client.get("/api/reports/daily-count")
+    response = client.get("/api/watchlist")
     assert response.status_code == 401
 
 def test_access_with_invalid_token():
     """Test accessing protected route with an invalid token returns 401"""
     headers = {"Authorization": "Bearer invalid-jwt-token"}
-    response = client.get("/api/reports/daily-count", headers=headers)
+    response = client.get("/api/watchlist", headers=headers)
     assert response.status_code == 401
 
 def test_access_with_malformed_auth_header():
     """Test accessing protected route with malformed auth header returns 401"""
     headers = {"Authorization": "InvalidFormat"}
-    response = client.get("/api/reports/daily-count", headers=headers)
+    response = client.get("/api/watchlist", headers=headers)
     assert response.status_code == 401

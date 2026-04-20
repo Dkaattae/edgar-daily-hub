@@ -62,6 +62,24 @@ def fetch_all_daily_counts():
         conn.close()
 
 
+def ticker_exists(ticker: str) -> bool:
+    """Check whether a ticker exists in the SEC company-tickers seed table."""
+    if not ticker:
+        return False
+    conn = get_md_conn()
+    try:
+        res = conn.execute(
+            "SELECT 1 FROM my_db.main.raw_company_tickers WHERE UPPER(ticker) = ? LIMIT 1",
+            [ticker.upper()],
+        ).fetchone()
+        return res is not None
+    except Exception as e:
+        print(f"Error validating ticker {ticker}: {e}")
+        return False
+    finally:
+        conn.close()
+
+
 def fetch_filings_by_tickers(tickers: list[str]):
     if not tickers:
         return []

@@ -1,4 +1,5 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { toast } from "sonner";
 import { fetchFilingsByTicker, fetchWatchlist, addToWatchlist, removeFromWatchlist } from "@/lib/api";
 import { Filing } from "@/data/types";
 import WatchlistInput from "@/components/WatchlistInput";
@@ -22,6 +23,10 @@ const Watchlist = () => {
   const addMutation = useMutation({
     mutationFn: addToWatchlist,
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ["watchlist"] }),
+    onError: (err: any) => {
+      const detail = err?.response?.data?.detail;
+      toast.error(detail || "Could not add ticker");
+    },
   });
 
   const removeMutation = useMutation({

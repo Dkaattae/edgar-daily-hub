@@ -58,11 +58,6 @@ export const logout = async () => {
   window.location.href = "/login";
 };
 
-export const getUsername = async (): Promise<string> => {
-  const { data: { user } } = await supabase.auth.getUser();
-  return user?.email || "";
-};
-
 export const fetchDailyCounts = async () => {
   const { data } = await api.get("/reports/daily-count");
   return data;

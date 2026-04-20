@@ -1,8 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
-import { LayoutDashboard, Eye, LogOut, User } from "lucide-react";
+import { LayoutDashboard, Eye, LogOut, User, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { logout, getUsername } from "@/lib/api";
+import { logout } from "@/lib/api";
+import { supabase } from "@/lib/supabase";
 import { useEffect, useState } from "react";
+import { Session } from "@supabase/supabase-js";
 
 const links = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard },
@@ -11,11 +13,17 @@ const links = [
 
 const AppNav = () => {
   const { pathname } = useLocation();
-  const [username, setUsername] = useState("");
+  const [session, setSession] = useState<Session | null>(null);
 
   useEffect(() => {
-    getUsername().then(setUsername);
+    supabase.auth.getSession().then(({ data: { session } }) => setSession(session));
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (_event, session) => setSession(session)
+    );
+    return () => subscription.unsubscribe();
   }, []);
+
+  const username = session?.user?.email || "";
 
   return (
     <header className="border-b border-border bg-card/80 backdrop-blur-sm sticky top-0 z-50">
@@ -46,14 +54,25 @@ const AppNav = () => {
             {new Date().toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" })}
           </span>
           <div className="flex items-center gap-2">
-            <span className="flex items-center gap-1.5 text-sm text-foreground">
-              <User className="h-4 w-4 text-primary" />
-              <span className="font-mono">{username}</span>
-            </span>
-            <Button variant="ghost" size="sm" onClick={logout} aria-label="Log out">
-              <LogOut className="h-4 w-4" />
-              Log out
-            </Button>
+            {session ? (
+              <>
+                <span className="flex items-center gap-1.5 text-sm text-foreground">
+                  <User className="h-4 w-4 text-primary" />
+                  <span className="font-mono">{username}</span>
+                </span>
+                <Button variant="ghost" size="sm" onClick={logout} aria-label="Log out">
+                  <LogOut className="h-4 w-4" />
+                  Log out
+                </Button>
+              </>
+            ) : (
+              <Button variant="ghost" size="sm" asChild aria-label="Log in">
+                <Link to="/login">
+                  <LogIn className="h-4 w-4" />
+                  Log in
+                </Link>
+              </Button>
+            )}
           </div>
         </div>
       </div>

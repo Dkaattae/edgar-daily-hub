@@ -10,6 +10,8 @@ import models, database, auth, motherduck
 
 app = FastAPI(title="EDGAR Data Pipeline API")
 
+WATCHLIST_MAX_TICKERS = int(os.environ.get("WATCHLIST_MAX_TICKERS", "20"))
+
 ALLOWED_ORIGINS = [
     "https://edgar-daily-hub.fly.dev",
 ]
@@ -107,11 +109,11 @@ def login(request: models.LoginRequest):
         raise HTTPException(status_code=401, detail=f"Login failed: {str(e)}")
 
 @app.get("/api/reports/daily-count", response_model=list[models.DailyCount])
-def get_daily_count(user: database.User = Depends(get_current_user)):
+def get_daily_count():
     return motherduck.fetch_daily_counts()
 
 @app.get("/api/reports/all-daily-counts", response_model=list[models.DailyCount])
-def get_all_daily_counts(user: database.User = Depends(get_current_user)):
+def get_all_daily_counts():
     return motherduck.fetch_all_daily_counts()
 
 @app.get("/api/reports/by-ticker", response_model=list[models.Filing])
@@ -129,11 +131,21 @@ def get_watchlist(user: database.User = Depends(get_current_user), db: Session =
 @app.post("/api/watchlist/{ticker}", status_code=201)
 def add_to_watchlist(ticker: str, user: database.User = Depends(get_current_user), db: Session = Depends(database.get_db)):
     ticker = ticker.upper()
+    if not motherduck.ticker_exists(ticker):
+        raise HTTPException(status_code=404, detail=f"Ticker '{ticker}' is not a known SEC filer.")
     exists = db.query(database.WatchlistTicker).filter(
         database.WatchlistTicker.user_id == user.id,
         database.WatchlistTicker.ticker == ticker
     ).first()
     if not exists:
+        current_count = db.query(database.WatchlistTicker).filter(
+            database.WatchlistTicker.user_id == user.id
+        ).count()
+        if current_count >= WATCHLIST_MAX_TICKERS:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Watchlist limit reached ({WATCHLIST_MAX_TICKERS} tickers). Remove one before adding another.",
+            )
         db.add(database.WatchlistTicker(user_id=user.id, ticker=ticker))
         db.commit()
     return {"ticker": ticker}

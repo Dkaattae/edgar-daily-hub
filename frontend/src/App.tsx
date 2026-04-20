@@ -67,7 +67,7 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
 
-          <Route path="/" element={<ProtectedRoute><ProtectedLayout><Dashboard /></ProtectedLayout></ProtectedRoute>} />
+          <Route path="/" element={<ProtectedLayout><Dashboard /></ProtectedLayout>} />
           <Route path="/watchlist" element={<ProtectedRoute><ProtectedLayout><Watchlist /></ProtectedLayout></ProtectedRoute>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
