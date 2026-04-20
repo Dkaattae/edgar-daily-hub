@@ -11,3 +11,8 @@ export const consumePostLoginRedirect = (): string => {
   if (path) sessionStorage.removeItem(KEY);
   return path || "/";
 };
+
+// Hard navigation. Separated from consumePostLoginRedirect so tests can mock it.
+export const hardRedirectTo = (path: string) => {
+  window.location.href = path;
+};

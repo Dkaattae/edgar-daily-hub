@@ -1,20 +1,26 @@
 import { useState, useEffect } from "react";
 import { login } from "@/lib/api";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { toast } from "sonner";
 import { useAuth } from "@/lib/auth";
-import { consumePostLoginRedirect } from "@/lib/authRedirect";
+import { consumePostLoginRedirect, hardRedirectTo } from "@/lib/authRedirect";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const { session } = useAuth();
-  const navigate = useNavigate();
 
+  // Single redirect path: when `session` becomes truthy (either because the
+  // user arrived here already signed in, or just completed signInWithPassword
+  // and the SIGNED_IN event flowed through AuthProvider), hard-navigate to the
+  // stashed destination. A hard nav forces the destination page to re-read
+  // session from localStorage and sidesteps any in-memory React state races.
   useEffect(() => {
-    if (session) navigate(consumePostLoginRedirect(), { replace: true });
-  }, [session, navigate]);
+    if (session) {
+      hardRedirectTo(consumePostLoginRedirect());
+    }
+  }, [session]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,12 +28,8 @@ const Login = () => {
     try {
       await login(email, password);
       toast.success("Logged in successfully");
-      // onAuthStateChange → setSession(newSession) → the session useEffect
-      // performs the single redirect. Don't navigate here or we race with it
-      // and the second call consumes an already-cleared sessionStorage key.
     } catch (err: any) {
       toast.error(err.message || "Invalid credentials");
-    } finally {
       setLoading(false);
     }
   };
@@ -42,8 +44,9 @@ const Login = () => {
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">EDGAR Hub</h2>
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700">Email</label>
+            <label htmlFor="login-email" className="block text-sm font-medium text-gray-700">Email</label>
             <input
+              id="login-email"
               type="email"
               className="mt-1 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={email}
@@ -52,8 +55,9 @@ const Login = () => {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Password</label>
+            <label htmlFor="login-password" className="block text-sm font-medium text-gray-700">Password</label>
             <input
+              id="login-password"
               type="password"
               className="mt-1 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={password}
