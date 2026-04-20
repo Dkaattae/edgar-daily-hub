@@ -39,15 +39,10 @@ const Login = () => {
     setLoading(true);
     try {
       await login(email, password);
-
-      const { data: { session: newSession }, error } = await supabase.auth.getSession();
-      if (error) throw error;
-      if (newSession) {
-        toast.success("Logged in successfully");
-        navigate(consumePostLoginRedirect(), { replace: true });
-      } else {
-        throw new Error("Session not established");
-      }
+      toast.success("Logged in successfully");
+      // onAuthStateChange → setSession(newSession) → the session useEffect
+      // performs the single redirect. Don't navigate here or we race with it
+      // and the second call consumes an already-cleared sessionStorage key.
     } catch (err: any) {
       toast.error(err.message || "Invalid credentials");
     } finally {
